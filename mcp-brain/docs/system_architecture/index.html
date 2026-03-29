@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCP Brain — Full System Architecture</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════ SIDEBAR ═══════════════════════════════ -->
+<nav>
+  <div class="nav-logo">
+    <span class="badge">Phase 1–3 · MCP Brain</span>
+    <h1>System Architecture</h1>
+    <p>Version 3.0 · March 2026</p>
+  </div>
+
+  <div class="nav-section-label">Overview</div>
+  <a href="#" onclick="showSection('hld',this)">
+    <span class="num">1</span> High Level Design
+  </a>
+  <a href="#" onclick="showSection('lld',this)">
+    <span class="num">2</span> Component Explorer
+  </a>
+  <a href="#" onclick="showSection('walkthrough',this)">
+    <span class="num">3</span> Pipeline Walkthrough
+  </a>
+
+  <div class="nav-section-label">Deep Dive</div>
+  <a href="#" onclick="showSection('visual-flow',this)">
+    <span class="num">4</span> Visual System Flow
+  </a>
+  <a href="#" onclick="showSection('interaction',this)">
+    <span class="num">5</span> Component Interaction
+  </a>
+  <a href="#" onclick="showSection('data',this)">
+    <span class="num">6</span> Data Structures
+  </a>
+
+  <div class="nav-section-label">Operations</div>
+  <a href="#" onclick="showSection('failures',this)">
+    <span class="num">7</span> Failure Scenarios
+  </a>
+  <a href="#" onclick="showSection('summary',this)">
+    <span class="num">8</span> Engineer Onboarding
+  </a>
+
+  <div class="nav-section-label">Phase 3</div>
+  <a href="#" onclick="showSection('phase3',this)">
+    <span class="num">9</span> Template Generator
+  </a>
+  <a href="#" onclick="showSection('dual-llm',this)">
+    <span class="num">10</span> Dual-LLM Gateway
+  </a>
+</nav>
+
+<!-- ═══════════════════════════════ MAIN ═══════════════════════════════ -->
+<main>
+
+<!-- ──────────────────────── 1. HLD ──────────────────────── -->
+<section id="hld">
+  <h1 class="page-title">High Level Design</h1>
+  <p class="page-subtitle">The Market Intelligence Engine is the autonomous data-collection, visual analysis, and structural synthesis pipeline driving the MCP Brain's Template Factory.</p>
+
+  <div class="stat-row">
+    <div class="stat-pill"><div class="stat-value">30+</div><div class="stat-label">Python Modules</div></div>
+    <div class="stat-pill"><div class="stat-value">19</div><div class="stat-label">Pipeline Stages</div></div>
+    <div class="stat-pill"><div class="stat-value">3</div><div class="stat-label">LLM Models</div></div>
+    <div class="stat-pill"><div class="stat-value">3</div><div class="stat-label">Phases Active</div></div>
+  </div>
+
+  <h2>Major Subsystems</h2>
+  <div class="grid grid-2">
+    <div class="card">
+      <h3>🌐 Ingestion Layer</h3>
+      <p>Connects to external APIs (Reddit PRAW, HackerNews, PyTrends) to identify statistically relevant design trends. Includes caching and rate-limiting to protect external quota.</p>
+    </div>
+    <div class="card">
+      <h3>🎭 Scraping Layer</h3>
+      <p>Uses Playwright headless automation to physically navigate websites, authenticate into Pinterest, and download high-res UI references. User-agent rotation prevents blocks.</p>
+    </div>
+    <div class="card">
+      <h3>🧠 Analysis Engine</h3>
+      <p>Multi-modal visual inference using Gemini 2.5 Flash. Translates raw pixels into JSON layout structures with spatial bounding box coordinates [x,y,w,h] for every component.</p>
+    </div>
+    <div class="card">
+      <h3>⚖️ Evaluation Engine</h3>
+      <p>Deterministic scoring pipeline: Reputation Scorer → Deduplication → Opportunity Ranker → Brief Scorer → Generator Validator. Ensures only high-quality, viable briefs reach Phase 3.</p>
+    </div>
+    <div class="card">
+      <h3>🗃️ Storage Layer</h3>
+      <p>Out-of-core persistence: flat-file JSON database (market_data.json), image index, pattern library files, pipeline state tracker, and automated dataset lifecycle management.</p>
+    </div>
+    <div class="card">
+      <h3>📡 Orchestration Layer</h3>
+      <p>Event-driven pipeline engine with exponential backoff retries, Prometheus metrics, secret-masking logger, and a scheduler for autonomous 12-hour market scan cycles.</p>
+    </div>
+  </div>
+
+  <h2>Architecture Flow</h2>
+  <div class="flow-diagram">
+<pre>
+[ EXTERNAL WORLD ]
+
+  ┌──────────┐   ┌──────────┐   ┌──────────┐   ┌──────────────────┐
+  │  Reddit  │   │Pinterest │   │ Dribbble │   │  Live Websites   │
+  └────┬─────┘   └────┬─────┘   └────┬─────┘   └────────┬─────────┘
+       │              │              │                   │
+       └──────────────┴──────────────┴───────────────────┘
+                              │
+                              ▼
+               ┌──────────────────────────────┐
+               │        Trend Collector        │  ← Reddit PRAW / HN / Cache
+               └──────────────┬───────────────┘
+                              │ Trend Object
+                              ▼
+               ┌──────────────────────────────┐
+               │    Rate Limiter + Scraper     │  ← Playwright + UA rotation
+               └──────────────┬───────────────┘
+                              │ Design Reference
+                              ▼
+               ┌──────────────────────────────┐
+               │      Trend Analyzer          │  ← Gemini 2.5 Flash Vision
+               └──────────────┬───────────────┘
+                              │ Visual JSON + coords
+                              ▼
+               ┌──────────────────────────────┐
+               │      Pattern Extractor        │  ← Normalize + Pattern Library
+               └──────────────┬───────────────┘
+                              │ UI Pattern
+                              ▼
+               ┌──────────────────────────────┐
+               │      Demand Estimator        │  ← PyTrends / SerpAPI
+               └──────────────┬───────────────┘
+                              │ Demand Object
+                              ▼
+               ┌──────────────────────────────┐
+               │      Opportunity Ranker       │  ← Score × Velocity × (1-Competition)
+               └──────────────┬───────────────┘
+                              │ Ranked Demand
+                              ▼
+               ┌──────────────────────────────┐
+               │    Design Brief Generator     │  ← Gemini 2.5 Pro synthesis
+               └──────────────┬───────────────┘
+                              │ Raw Brief
+                              ▼
+               ┌──────────────────────────────┐
+               │  Scorer → Validator → Gate   │  ← quality_score ≥ 0.6 required
+               └──────────────┬───────────────┘
+                              │ Validated Brief
+                              ▼
+               ┌──────────────────────────────┐
+               │       Storage Layer          │  ← market_data.json + patterns/
+               └──────────────────────────────┘
+</pre>
+  </div>
+
+  <h2>How MCP Brain Wraps Phase 2</h2>
+  <p>The <strong>MarketPipeline</strong> class wraps the entire agent execution in an event-driven retry loop. It emits events to the central <strong>EventBus</strong> at start/complete/fail, updates the <strong>StateTracker</strong> at each stage, and increments <strong>Prometheus Metrics</strong> for observability. On failure, <code>asyncio.sleep(2^attempt)</code> provides exponential backoff before retry.</p>
+</section>
+
+<!-- ──────────────────────── 2. LLD ──────────────────────── -->
+<section id="lld">
+  <h1 class="page-title">Component Explorer</h1>
+  <p class="page-subtitle">Click any component to explore its role, design decisions, data flow, future roadmap, and alternative approaches.</p>
+
+  <div class="comp-grid" id="comp-grid"></div>
+  <div class="comp-detail" id="comp-detail"></div>
+</section>
+
+<!-- ──────────────────────── 3. WALKTHROUGH ──────────────────────── -->
+<section id="walkthrough">
+  <h1 class="page-title">Pipeline Walkthrough</h1>
+  <p class="page-subtitle">Simulating a complete execution for topic: <code>"AI SaaS dashboard"</code>. Click each step to expand.</p>
+
+  <div class="pipeline" id="pipeline-steps">
+
+    <div class="pipeline-step" onclick="toggleStep(this)">
+      <div class="step-dot">01</div>
+      <div class="step-body">
+        <div class="step-title">Trend Collection</div>
+        <div class="step-sub">trend_collector.py · cache.py</div>
+        <div class="step-detail">
+          <p>The cache is checked first. If miss, PRAW connects to Reddit. With a 401 error (no valid creds), it falls back to HackerNews REST. The top story "AI Code Tools Are Replacing Devs" is normalized to a Trend Object. The result is written to <code>cache/latest_trend.json</code> with a TTL of 3600 seconds.</p>
+          <div><span class="data-badge badge-out">trend: "AI Code Tools UI"</span> <span class="data-badge badge-out">score: 0.88</span> <span class="data-badge badge-out">source: hacker_news_free_api</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pipeline-step" onclick="toggleStep(this)">
+      <div class="step-dot">02</div>
+      <div class="step-body">
+        <div class="step-title">Rate Limiter + Design Scraping</div>
+        <div class="step-sub">rate_limiter.py · design_scraper.py</div>
+        <div class="step-detail">
+          <p>Rate limiter waits 2.7 seconds (base 2s + jitter 0.7s) and selects a random user-agent. Pinterest credentials are detected in .env — Playwright launches headless=False, logs in, searches "AI Code Tools UI design" and extracts 4 high-res 736x PNG image URLs. Results are cached by topic key.</p>
+          <div><span class="data-badge badge-out">image_urls: [4 Pinterest URLs]</span> <span class="data-badge badge-out">source: pinterest</span> <span class="data-badge badge-out">reputation: 0.6</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pipeline-step" onclick="toggleStep(this)">
+      <div class="step-dot">03</div>
+      <div class="step-body">
+        <div class="step-title">Screenshot Capture</div>
+        <div class="step-sub">design_scraper.scrape_live_website()</div>
+        <div class="step-detail">
+          <p>If the trend contained a reference_url (from a Reddit post), Playwright navigates to the live site, scrolls 1000px to trigger lazy-loaded elements, waits 2 seconds for animations to settle, and takes a full-page screenshot saved to <code>storage/visuals/live_scrape_HASH.png</code>.</p>
+          <div><span class="data-badge badge-out">local_screenshot: storage/visuals/live_scrape_X.png</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pipeline-step" onclick="toggleStep(this)">
+      <div class="step-dot">04</div>
+      <div class="step-body">
+        <div class="step-title">Visual Analysis (Gemini 2.5 Flash)</div>
+        <div class="step-sub">trend_analyzer.py</div>
+        <div class="step-detail">
+          <p>The 4 Pinterest image URLs are fetched (httpx on-the-fly), raw bytes are bundled with the text prompt into a multi-part Gemini payload. The model physically sees the pixels and returns a JSON structure identifying sections, typography, colors, animations, and bounding box coordinates for each UI block.</p>
+          <div><span class="data-badge badge-out">sections: ["sidebar","metrics_grid","chart"]</span> <span class="data-badge badge-out">annotations: [3 coord objects]</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pipeline-step" onclick="toggleStep(this)">
+      <div class="step-dot">05</div>
+      <div class="step-body">
+        <div class="step-title">Pattern Extraction + Library Save</div>
+        <div class="step-sub">pattern_extractor.py · structured_pattern_library.py</div>
+        <div class="step-detail">
+          <p>The analyzer output is normalized into a canonical UI Pattern Object. Simultaneously, <code>pattern_library.save_pattern('glassmorphic_dark', pattern)</code> appends the pattern to <code>patterns/glassmorphic_dark_patterns.json</code>, growing the reusable library for future runs.</p>
+          <div><span class="data-badge badge-out">layout_type: dashboard</span> <span class="data-badge badge-out">style: glassmorphic_dark</span> <span class="data-badge badge-out">patterns/glassmorphic_dark_patterns.json updated</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pipeline-step" onclick="toggleStep(this)">
+      <div class="step-dot">06</div>
+      <div class="step-body">
+        <div class="step-title">Demand Estimation</div>
+        <div class="step-sub">demand_estimator.py · PyTrends</div>
+        <div class="step-detail">
+          <p>The keyword "dashboard template" is sent to PyTrends querying Google Trends for the past 30 days. Average normalized interest returns 0.79. Competition is hardcoded at 0.45 (extensible via SerpAPI later).</p>
+          <div><span class="data-badge badge-out">demand_score: 0.79</span> <span class="data-badge badge-out">competition_score: 0.45</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pipeline-step" onclick="toggleStep(this)">
+      <div class="step-dot">07</div>
+      <div class="step-body">
+        <div class="step-title">Opportunity Ranking</div>
+        <div class="step-sub">opportunity_ranker.py · reputation_scorer.py</div>
+        <div class="step-detail">
+          <p>Source reputation (Pinterest = 0.6) is attached to the designs dict. Opportunity score = 0.79 × 1.0 × (1 - 0.45) = <strong>0.435</strong>. If multiple demand objects exist, the highest-scoring one is selected as best_opp for brief generation.</p>
+          <div><span class="data-badge badge-out">opportunity_score: 0.435</span> <span class="data-badge badge-out">reputation: 0.6</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pipeline-step" onclick="toggleStep(this)">
+      <div class="step-dot">08</div>
+      <div class="step-body">
+        <div class="step-title">Design Brief Generation (Dual-LLM: LLaMA → Gemini)</div>
+        <div class="step-sub">design_brief_generator.py · core/llm_gateway.py</div>
+        <div class="step-detail">
+          <p>All gathered intelligence is sent through the <strong>Dual-LLM Gateway</strong>. Step 1: LLaMA 3.2 (local, via Ollama) produces a fast JSON draft (~13s, zero API cost). Step 2: Gemini 2.5 Pro refines and enhances the draft (when quota is available). If Gemini is rate-limited, the LLaMA draft is used directly. Markdown fences are stripped, demand_score is re-stamped.</p>
+          <div><span class="data-badge badge-out">product_type: "AI SaaS Dashboard Template"</span> <span class="data-badge badge-out">provider: dual (llama+gemini)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pipeline-step" onclick="toggleStep(this)">
+      <div class="step-dot">09</div>
+      <div class="step-body">
+        <div class="step-title">Validation Cascade</div>
+        <div class="step-sub">brief_scorer → generator_validator → brief_validator</div>
+        <div class="step-detail">
+          <p>1) BriefScorer computes quality_score = 0.87 (style ✓ 0.3, sections ✓ 0.3, animation ✓ 0.2, demand ✓ 0.158). 2) GeneratorValidator checks sections non-empty, style truthy, quality ≥ 0.6 — all pass. 3) BriefValidator confirms all required keys populated. Provenance dict is injected.</p>
+          <div><span class="data-badge badge-out">quality_score: 0.87</span> <span class="data-badge badge-out">compatible: True</span> <span class="data-badge badge-out">valid: True</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pipeline-step" onclick="toggleStep(this)">
+      <div class="step-dot">10</div>
+      <div class="step-body">
+        <div class="step-title">Storage & Cleanup</div>
+        <div class="step-sub">metadata_store · state_tracker · dataset_manager</div>
+        <div class="step-detail">
+          <p>The validated brief is appended to <code>market_data.json</code>. StateTracker marks pipeline "completed" with end_time. DatasetManager scans images folder — 12 files found, none older than 30 days, no archiving needed. Metrics counters (brief_generation_total, pipeline_success_total) are incremented. Pipeline returns successfully.</p>
+          <div><span class="data-badge badge-out">market_data.json updated</span> <span class="data-badge badge-out">status: completed</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────────── 4. VISUAL FLOW ──────────────────────── -->
+<section id="visual-flow">
+  <h1 class="page-title">Visual System Flow</h1>
+  <p class="page-subtitle">Full ASCII architecture map from external sources to storage output.</p>
+  <div class="flow-diagram">
+<pre>
+ EXTERNAL SOURCES
+ ┌──────────────────────────────────────────────────────────────────────┐
+ │  Reddit (PRAW)  │  Pinterest (Auth)  │  Dribbble  │  Live Websites  │
+ └──────────────────────────────────────────────────────────────────────┘
+          │                  │                │               │
+          └──────────────────┴────────────────┴───────────────┘
+                                     │
+                         ORCHESTRATION LAYER
+                ┌───────────────────────────────────────────┐
+                │  MarketPipeline (retry loop + backoff)     │
+                │  StateTracker | EventBus | Metrics         │
+                └──────────────────┬────────────────────────┘
+                                   │
+         ┌─────────────────────────▼──────────────────────────┐
+         │           MARKET INTELLIGENCE ENGINE                 │
+         │                                                      │
+         │  [cache.py]──►[TrendCollector]──►[RateLimiter]      │
+         │                                        │             │
+         │                               [DesignScraper]        │
+         │                              /     |      \          │
+         │                        Pinterest Dribbble LiveSite   │
+         │                              \     |      /          │
+         │                         [DeduplicationEngine]        │
+         │                                   │                  │
+         │                          [TrendAnalyzer]             │
+         │                          Gemini 2.5 Flash Vision     │
+         │                                   │                  │
+         │                        [PatternExtractor]            │
+         │                         ──► [PatternLibrary]         │
+         │                                   │                  │
+         │                        [DemandEstimator]             │
+         │                          PyTrends / SerpAPI          │
+         │                                   │                  │
+         │              [ReputationScorer]──►[OppRanker]        │
+         │                                   │                  │
+         │                        [BriefGenerator]              │
+         │                          Gemini 2.5 Pro              │
+         │                                   │                  │
+         │   [BriefScorer]──►[GenValidator]──►[BriefValidator]  │
+         │                                   │                  │
+         └─────────────────────────┬──────────────────────────┘
+                                   │
+                         STORAGE LAYER
+                ┌───────────────────────────────────────────┐
+                │  MetadataStore     → market_data.json      │
+                │  ImageStorage      → design_images/        │
+                │  PatternLibrary    → patterns/*.json       │
+                │  DatasetManager    → archive/ cleanup      │
+                │  StateTracker      → pipeline_states.json  │
+                └───────────────────────────────────────────┘
+                                   │
+                         PHASE 3 INPUT
+                ┌───────────────────────────────────────────┐
+                │   Validated Design Brief JSON              │
+                │   → Code Generator reads market_data.json  │
+                │   → Generates React / Tailwind Templates   │
+                └───────────────────────────────────────────┘
+</pre>
+  </div>
+</section>
+
+<!-- ──────────────────────── 5. INTERACTION ──────────────────────── -->
+<section id="interaction">
+  <h1 class="page-title">Component Interaction Map</h1>
+  <p class="page-subtitle">How modules communicate through data passing, events, and side effects.</p>
+
+  <h2>Interaction Sequence</h2>
+  <ol style="color:#94a3b8; line-height:2.2; padding-left:1.5rem">
+    <li><strong>Pipeline Engine → Agent:</strong> MarketPipeline.run() calls MarketIntelligenceAgent.process() inside a retry while-loop. StateTracker.create_pipeline() is called before any agent work begins.</li>
+    <li><strong>Agent → EventBus:</strong> Every major event fires log_activity() which wraps event_bus.emit(). The Bus broadcasts to all subscribers (currently logger + monitor hooks).</li>
+    <li><strong>TrendCollector → Cache:</strong> Before any API call, cache.get() is checked. On hit, the cached dict is returned directly. On miss, API is called and cache.set() saves the result with TTL=3600.</li>
+    <li><strong>Scraper → RateLimiter:</strong> Every Playwright launch is gated through rate_limiter.wait() which enforces randomized jitter delays and injects a rotated User-Agent string into context headers.</li>
+    <li><strong>Agent → DeduplicationEngine:</strong> After scraping, deduplication_engine.is_duplicate(designs) is called. Skip metrics increment on True. This is a side-channel check — not blocking pipeline flow.</li>
+    <li><strong>PatternExtractor → PatternLibrary:</strong> After normalization, pattern_library.save_pattern() is called as a side effect, persisting to disk without interrupting the main data flow.</li>
+    <li><strong>BriefGenerator → Validation Cascade:</strong> brief_scorer.score_brief() → generator_validator.is_compatible() → brief_validator.validate() run sequentially, each throwing an Exception on failure which bubbles up to the pipeline retry loop.</li>
+    <li><strong>Pipeline → StateTracker:</strong> On success: state_tracker.complete_pipeline(). On failure: state_tracker.fail_pipeline(error). Either way, the run is permanently logged for post-mortem analysis.</li>
+  </ol>
+</section>
+
+<!-- ──────────────────────── 6. DATA ──────────────────────── -->
+<section id="data">
+  <h1 class="page-title">Data Structures</h1>
+  <p class="page-subtitle">The key payload objects passed between pipeline stages.</p>
+
+  <h2>1 · Trend Object</h2>
+  <div class="json-block"><span class="jc">// Output of trend_collector.py → input to design_scraper.py</span>
+{
+  <span class="jk">"trend"</span>:            <span class="jv">"Reddit Theme: Glassmorphic SaaS UI"</span>,
+  <span class="jk">"popularity_score"</span>: <span class="jn">0.88</span>,          <span class="jc">// normalized 0.5–0.99</span>
+  <span class="jk">"source"</span>:           <span class="jv">"reddit_api: r/UI_Design"</span>,
+  <span class="jk">"reference_url"</span>:    <span class="jv">"https://linear.app"</span>   <span class="jc">// optional live site</span>
+}</div>
+
+  <h2>2 · Design Reference Object</h2>
+  <div class="json-block"><span class="jc">// Output of design_scraper.py → input to trend_analyzer.py</span>
+{
+  <span class="jk">"title"</span>:            <span class="jv">"Live Scraped Pinterest UI for Glassmorphic SaaS"</span>,
+  <span class="jk">"image_urls"</span>:       [<span class="jv">"https://i.pinimg.com/736x/..."</span>],
+  <span class="jk">"local_screenshot"</span>: <span class="jv">"storage/visuals/live_scrape_X.png"</span>,
+  <span class="jk">"source"</span>:           <span class="jv">"Scraped from Pinterest: Glassmorphic SaaS"</span>,
+  <span class="jk">"reputation_score"</span>: <span class="jn">0.6</span>           <span class="jc">// pinterest = 0.6</span>
+}</div>
+
+  <h2>3 · UI Pattern Object</h2>
+  <div class="json-block"><span class="jc">// Output of pattern_extractor.py → saved to metadata + pattern library</span>
+{
+  <span class="jk">"layout_type"</span>:      <span class="jv">"dashboard"</span>,
+  <span class="jk">"structure"</span>:        [<span class="jv">"sidebar_nav"</span>, <span class="jv">"metrics_grid"</span>, <span class="jv">"chart_panel"</span>],
+  <span class="jk">"style"</span>:            <span class="jv">"glassmorphic_dark"</span>,
+  <span class="jk">"complexity_score"</span>: <span class="jn">0.75</span>
+}</div>
+
+  <h2>4 · Final Design Brief Object</h2>
+  <div class="json-block"><span class="jc">// Final validated output → stored in market_data.json → Phase 3 input</span>
+{
+  <span class="jk">"product_type"</span>:     <span class="jv">"AI SaaS Dashboard Template"</span>,
+  <span class="jk">"target_market"</span>:    <span class="jv">"AI startups and DevTool companies"</span>,
+  <span class="jk">"style"</span>:            <span class="jv">"glassmorphic dark mode with gradient accents"</span>,
+  <span class="jk">"sections"</span>:         [<span class="jv">"sidebar_nav"</span>, <span class="jv">"hero_metrics"</span>, <span class="jv">"chart_panel"</span>, <span class="jv">"ai_feed"</span>],
+  <span class="jk">"animation_type"</span>:   <span class="jv">"staggered fade-in with counter animations"</span>,
+  <span class="jk">"demand_score"</span>:     <span class="jn">0.82</span>,
+  <span class="jk">"quality_score"</span>:    <span class="jn">0.87</span>,
+  <span class="jk">"provenance"</span>: {
+    <span class="jk">"trend_source"</span>:       <span class="jv">"reddit_api: r/UI_Design"</span>,
+    <span class="jk">"design_reference"</span>:   <span class="jv">"Scraped from Pinterest: ..."</span>,
+    <span class="jk">"image_urls"</span>:         [<span class="jv">"https://i.pinimg.com/..."</span>],
+    <span class="jk">"analysis_model"</span>:     <span class="jv">"gemini_2.5_pro"</span>,
+    <span class="jk">"source_reputation"</span>:  <span class="jn">0.6</span>
+  }
+}</div>
+</section>
+
+<!-- ──────────────────────── 7. FAILURES ──────────────────────── -->
+<section id="failures">
+  <h1 class="page-title">Failure Scenarios</h1>
+  <p class="page-subtitle">Click each scenario to see the full recovery path.</p>
+
+  <div class="failure-card reddit" onclick="toggleFailure(this)">
+    <div class="failure-title">🟠 Reddit API Returns 401 Unauthorized</div>
+    <div class="failure-sub" style="font-size:0.85rem;color:#64748b">Authentication failure · PRAW</div>
+    <div class="failure-body">
+      <p><strong>Root Cause:</strong> Reddit credentials not set in .env, or app token expired.</p>
+      <p><strong>Recovery Path:</strong> The <code>except Exception</code> block in trend_collector.py catches the error and logs it via <code>logging.error("Reddit API failed: ...")</code>. Execution falls through to the HackerNews REST API path. If HN also fails, the deterministic fallback dict <code>{"trend": "AI SaaS landing page", "score": 0.89}</code> is returned. The pipeline never receives None.</p>
+      <p><strong>Prevention:</strong> Set REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET in .env. The validate_environment() call on startup will warn immediately if missing.</p>
+    </div>
+  </div>
+
+  <div class="failure-card scraper" onclick="toggleFailure(this)">
+    <div class="failure-title">🔴 Playwright Scraping Times Out / CAPTCHA Block</div>
+    <div class="failure-sub" style="font-size:0.85rem;color:#64748b">Browser automation failure · design_scraper.py</div>
+    <div class="failure-body">
+      <p><strong>Root Cause:</strong> Pinterest or Dribbble detected bot activity, served CAPTCHA, or selector timeout hit 15 seconds.</p>
+      <p><strong>Recovery Path:</strong> The <code>try/except Exception</code> in each scrape method catches all Playwright errors. The fallback sets <code>image_urls: ["https://placehold.co/800x600/png?text=Blocked"]</code> — a real URL that doesn't crash downstream byte fetching. The rate limiter's jitter and UA rotation reduce future occurrence probability.</p>
+      <p><strong>Prevention:</strong> Increase jitter range. Use rotating residential proxies. Consider Apify cloud scraper actors which are maintained to bypass modern bot detection.</p>
+    </div>
+  </div>
+
+  <div class="failure-card llm" onclick="toggleFailure(this)">
+    <div class="failure-title">🟣 Gemini API Returns 429 Quota Exceeded</div>
+    <div class="failure-sub" style="font-size:0.85rem;color:#64748b">LLM rate limit · trend_analyzer.py + design_brief_generator.py</div>
+    <div class="failure-body">
+      <p><strong>Root Cause:</strong> Free-tier Gemini API quota consumed (typically 15 RPM / 1M TPD for Flash, lower for Pro).</p>
+      <p><strong>Recovery Path [Analyzer]:</strong> Returns <code>{"popular_sections": ["hero with gradient", "feature grid", "pricing table"], "error": "..."}</code> — a minimal but valid response that allows pattern extraction to proceed.</p>
+      <p><strong>Recovery Path [Generator]:</strong> Falls back to an algorithmically composed brief using the collected demand, pattern, and trend data directly — populating all required fields without LLM involvement. The brief_validator then catches it, and in most cases it passes.</p>
+      <p><strong>Prevention:</strong> Implement request queuing with exponential backoff (already in pipeline retry loop). Upgrade to paid Gemini API tier. Add Claude or GPT-4o as secondary LLM fallbackswhen primary quota exceeds.</p>
+    </div>
+  </div>
+
+  <div class="failure-card brief" onclick="toggleFailure(this)">
+    <div class="failure-title">🟡 Invalid Brief Generated — Validation Fails</div>
+    <div class="failure-sub" style="font-size:0.85rem;color:#64748b">Schema violation · generator_validator.py + brief_validator.py</div>
+    <div class="failure-body">
+      <p><strong>Root Cause:</strong> LLM generated a brief missing required keys (e.g., product_type absent), or quality_score computed below 0.6 threshold (too few sections, no style defined).</p>
+      <p><strong>Recovery Path:</strong> generator_validator.is_compatible() returns (False, reason). The agent calls log_activity("generator_compatibility_failed") then <code>raise Exception(f"Unstable Brief Generated: {reason}")</code>. This propagates up to MarketPipeline's retry while-loop. Attempt counter increments, state_tracker records the error string, asyncio.sleep(2^attempt) fires, then the entire pipeline stage restarts.</p>
+      <p><strong>Max Retries:</strong> 3 attempts (configurable via self.max_retries). After 3 failures, state_tracker.fail_pipeline() is called and the exception re-raises to the caller.</p>
+    </div>
+  </div>
+
+  <div class="failure-card dup" onclick="toggleFailure(this)">
+    <div class="failure-title">🟢 Duplicate Design Detected by Deduplication Engine</div>
+    <div class="failure-sub" style="font-size:0.85rem;color:#64748b">Soft failure · deduplication_engine.py</div>
+    <div class="failure-body">
+      <p><strong>Root Cause:</strong> The same trend topic was scraped multiple times (e.g., cache expired, same HN story trending across days). The MD5 hash of the designs dict matches a previously seen hash.</p>
+      <p><strong>Recovery Path:</strong> This is a "soft" failure — the pipeline does NOT stop. Instead, <code>metrics.scrape_success.inc()</code> is skipped (keeping metrics accurate), and <code>log_activity("duplicate_designs_skipped")</code> is emitted. The pipeline continues to analysis and brief generation — sometimes producing a differently ranked brief even from duplicate source data due to changing demand scores.</p>
+      <p><strong>Improvement:</strong> Current in-memory hash set resets on restart. Persisting hashes to Redis with 7-day TTL would enable true cross-run deduplication.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────────── 8. SUMMARY ──────────────────────── -->
+<section id="summary">
+  <h1 class="page-title">Engineer Onboarding Guide</h1>
+  <p class="page-subtitle">Welcome to the team. Here is everything you need to understand this system.</p>
+
+  <h2>What Problem Does This System Solve?</h2>
+  <p>Before Phase 2 existed, our Template Factory (Phase 3) needed a human to manually specify what to build: "build a dark SaaS dashboard." That is not scalable. We want a system that autonomously discovers what the market wants, analyzes what top designers are building, and continuously feeds structured specifications into the generation pipeline — completely hands-off.</p>
+  <p>Phase 2 is that system. It is the <strong>autonomous market research arm</strong> of the product factory.</p>
+
+  <h2>The Mental Model</h2>
+  <div class="grid grid-2">
+    <div class="card"><h3>📡 Antenna</h3><p>TrendCollector + Scheduler continuously monitors Reddit/HN for market signals — what topics are designers discussing right now?</p></div>
+    <div class="card"><h3>👀 Eyes</h3><p>DesignScraper + TrendAnalyzer physically browse the internet, download images, and use Gemini Vision to understand what they see at the pixel level.</p></div>
+    <div class="card"><h3>🧠 Brain</h3><p>PatternExtractor + DemandEstimator + OpportunityRanker analyzes viability — is this trend actually worth building? What's the demand score?</p></div>
+    <div class="card"><h3>📋 Mouth</h3><p>DesignBriefGenerator + Validators produce the final standardized specification — a JSON "design ticket" that Phase 3 ingests to generate code.</p></div>
+  </div>
+
+  <h2>What Is the Final Output?</h2>
+  <p>A <strong>Design Brief JSON object</strong> stored in <code>market_data.json</code>. Think of it as a Jira ticket written by an AI Product Manager, specifically formatted for a robot programmer. It contains the product type, target customer, visual style, ordered UI sections, animation type, a quality score, and full provenance data tracing how every field was derived.</p>
+  <p><strong>Phase 3</strong> reads this brief to generate actual React/Tailwind/HTML files. The richer and more accurate the brief, the higher quality the generated template output will be.</p>
+
+  <h2>Key Files to Read First</h2>
+  <div class="grid grid-3">
+    <div class="card" style="border-left:3px solid var(--accent)"><code>market_pipeline.py</code><p style="margin-top:0.5rem;font-size:0.85rem">The entry point. Start here to understand retry logic and state flow.</p></div>
+    <div class="card" style="border-left:3px solid var(--accent2)"><code>market_intelligence_agent.py</code><p style="margin-top:0.5rem;font-size:0.85rem">The orchestrator. Shows the exact stage ordering and what data flows where.</p></div>
+    <div class="card" style="border-left:3px solid var(--accent3)"><code>market_data.json</code><p style="margin-top:0.5rem;font-size:0.85rem">The live database. Open this after a test run to see the system's actual output.</p></div>
+  </div>
+
+  <h2>Future Growth Directions</h2>
+  <div class="grid grid-2">
+    <div class="card"><h3>🚀 Scale (6 months)</h3><p>Redis caching + Celery distributed workers + PostgreSQL storage. Run 50 parallel pipeline scans instead of 1 sequential scan.</p></div>
+    <div class="card"><h3>🤖 Intelligence (1 year)</h3><p>Fine-tune a local Mistral 7B on historical Brief → successful template pairs. Eliminate cloud LLM dependency for brief generation.</p></div>
+    <div class="card"><h3>🗂️ Knowledge Base (ongoing)</h3><p>Pattern library grows with every run. Add vector embeddings (Qdrant) to enable "find patterns similar to X" semantic retrieval for Phase 3.</p></div>
+    <div class="card"><h3>📊 Continuous Learning (ongoing)</h3><p>Feed Phase 3 output quality ratings back into the scoring models. System improves its own brief quality through iterative feedback loops.</p></div>
+  </div>
+</section>
+
+<!-- ──────────────────────── 9. PHASE 3 ──────────────────────── -->
+<section id="phase3">
+  <h1 class="page-title">Phase 3 — Template Generator Engine</h1>
+  <p class="page-subtitle">Converts validated Design Briefs into complete, runnable UI templates (Vite + React + Tailwind CSS).</p>
+
+  <div class="stat-row">
+    <div class="stat-pill"><div class="stat-value">9</div><div class="stat-label">Pipeline Stages</div></div>
+    <div class="stat-pill"><div class="stat-value">12</div><div class="stat-label">Generator Modules</div></div>
+    <div class="stat-pill"><div class="stat-value">8</div><div class="stat-label">Components/Template</div></div>
+    <div class="stat-pill"><div class="stat-value">12KB</div><div class="stat-label">Avg Package Size</div></div>
+  </div>
+
+  <h2>Architecture Flow</h2>
+  <div class="flow-diagram">
+<pre>
+  Design Brief (from Phase 2)
+         │
+         ▼
+  ┌──────────────────────────────────────┐
+  │       TEMPLATE GENERATOR ENGINE       │
+  │                                        │
+  │  [BriefParser] ──► normalize sections  │
+  │        │           infer layout type   │
+  │        │           resolve presets      │
+  │        ▼                               │
+  │  [ProjectBuilder] ──► Vite scaffold    │
+  │        │              package.json     │
+  │        │              index.html       │
+  │        ▼                               │
+  │  [StyleGenerator] ──► tailwind.config  │
+  │        │              postcss.config   │
+  │        │              glassmorphic CSS  │
+  │        ▼                               │
+  │  [LayoutBuilder] ──► section ordering  │
+  │        │             grid breakpoints  │
+  │        │             layout.json       │
+  │        ▼                               │
+  │  [ComponentGenerator] ──► JSX files    │
+  │        │                 LandingPage   │
+  │        │                 8 sections    │
+  │        ▼                               │
+  │  [AssetManager] ──► SVG icons          │
+  │        │            image manifest     │
+  │        ▼                               │
+  │  [CodeValidator] ──► structure check   │
+  │        │             deps check        │
+  │        │             JSX/CSS lint      │
+  │        ▼                               │
+  │  [PreviewBuilder] ──► Playwright       │
+  │        │              screenshot       │
+  │        ▼                               │
+  │  [TemplatePackager] ──► .zip archive   │
+  │                        registry.json   │
+  └──────────────────────────────────────┘
+         │
+         ▼
+  generated_templates/
+  ├── {name}/         (runnable project)
+  ├── {name}.zip      (distributable)
+  └── template_registry.json
+</pre>
+  </div>
+
+  <h2>Generator Modules</h2>
+  <div class="grid grid-3">
+    <div class="card" style="border-left:3px solid var(--accent)"><h3>📝 Brief Parser</h3><p>Normalizes section names, infers layout type, resolves style/animation presets from the raw design brief.</p></div>
+    <div class="card" style="border-left:3px solid var(--accent)"><h3>🏗️ Project Builder</h3><p>Scaffolds Vite + React + Tailwind project: package.json, index.html, main.jsx, App.jsx, directory tree.</p></div>
+    <div class="card" style="border-left:3px solid var(--accent2)"><h3>🎨 Style Generator</h3><p>Generates tailwind.config.js, postcss.config.js, glassmorphic base CSS, and a class mapping JSON.</p></div>
+    <div class="card" style="border-left:3px solid var(--accent2)"><h3>📐 Layout Builder</h3><p>Orders sections, applies responsive grid breakpoints, writes layout.json for the component hierarchy.</p></div>
+    <div class="card" style="border-left:3px solid var(--accent3)"><h3>⚛️ Component Gen</h3><p>Generates React JSX files for each section with Framer Motion animations and Tailwind classes.</p></div>
+    <div class="card" style="border-left:3px solid var(--accent3)"><h3>🖼️ Asset Manager</h3><p>Writes inline Heroicon SVGs and a placeholder image manifest into the generated project.</p></div>
+    <div class="card" style="border-left:3px solid var(--accent-warn)"><h3>✅ Code Validator</h3><p>Checks folder structure, package.json deps, JSX export patterns, Tailwind class usage, and CSS directives.</p></div>
+    <div class="card" style="border-left:3px solid var(--accent-warn)"><h3>📸 Preview Builder</h3><p>Uses Playwright to build and screenshot the template. Graceful fallback if Node/npm are unavailable.</p></div>
+    <div class="card" style="border-left:3px solid var(--accent-danger)"><h3>📦 Packager</h3><p>Zips the project (excluding node_modules), creates metadata, and updates template_registry.json.</p></div>
+  </div>
+
+  <h2>API Endpoints</h2>
+  <div class="grid grid-3">
+    <div class="card"><code>POST /generator/build</code><p style="margin-top:0.5rem;font-size:0.85rem">Trigger template generation. Pass a brief directly or by index from market_data.json.</p></div>
+    <div class="card"><code>GET /generator/templates</code><p style="margin-top:0.5rem;font-size:0.85rem">List all generated templates from the registry.</p></div>
+    <div class="card"><code>GET /generator/template/{name}</code><p style="margin-top:0.5rem;font-size:0.85rem">Get metadata for a specific generated template.</p></div>
+  </div>
+
+  <h2>Generated Output Example</h2>
+  <div class="json-block"><span class="jc">// template_registry.json — entry for a generated template</span>
+{
+  <span class="jk">"template_name"</span>:   <span class="jv">"ai-saas-template-template"</span>,
+  <span class="jk">"version"</span>:         <span class="jv">"1.0"</span>,
+  <span class="jk">"components"</span>:      <span class="jn">8</span>,
+  <span class="jk">"generated_date"</span>:  <span class="jv">"2026-03-15"</span>,
+  <span class="jk">"template_type"</span>:   <span class="jv">"AI SaaS template"</span>,
+  <span class="jk">"style_theme"</span>:     <span class="jv">"dark"</span>,
+  <span class="jk">"validation"</span>:      { <span class="jk">"valid"</span>: <span class="jb">true</span>, <span class="jk">"warnings"</span>: <span class="jn">0</span> },
+  <span class="jk">"archive"</span>:         <span class="jv">"ai-saas-template-template.zip"</span>,
+  <span class="jk">"archive_size"</span>:    <span class="jn">12247</span> <span class="jc">// bytes</span>
+}</div>
+</section>
+
+<!-- ──────────────────────── 10. DUAL-LLM ──────────────────────── -->
+<section id="dual-llm">
+  <h1 class="page-title">Dual-LLM Gateway</h1>
+  <p class="page-subtitle">Intelligent routing between LLaMA 3.2 (local via Ollama) and Gemini 2.5 Pro (cloud) using a Draft-Refine strategy.</p>
+
+  <div class="stat-row">
+    <div class="stat-pill"><div class="stat-value">2</div><div class="stat-label">LLM Providers</div></div>
+    <div class="stat-pill"><div class="stat-value">3B</div><div class="stat-label">Local Model Params</div></div>
+    <div class="stat-pill"><div class="stat-value">~13s</div><div class="stat-label">Local Inference</div></div>
+    <div class="stat-pill"><div class="stat-value">$0</div><div class="stat-label">Local API Cost</div></div>
+  </div>
+
+  <h2>System Specs & Model Selection</h2>
+  <div class="grid grid-2">
+    <div class="card">
+      <h3>💻 Hardware</h3>
+      <p><strong>CPU:</strong> Intel i3-1115G4 (2C/4T, 3GHz)<br>
+         <strong>RAM:</strong> 8 GB<br>
+         <strong>GPU:</strong> Intel UHD (integrated, no CUDA)<br>
+         <strong>Inference:</strong> CPU-only</p>
+    </div>
+    <div class="card">
+      <h3>🧠 Model Choice</h3>
+      <p><strong>Selected:</strong> LLaMA 3.2 3B (Q4, ~2GB RAM)<br>
+         <strong>Rejected:</strong> LLaMA 3 8B (4.7GB — causes OOM)<br>
+         <strong>Rejected:</strong> Qwen 2.5 Coder 32B (19GB — impossible)<br>
+         <strong>Custom:</strong> mcp-brain:latest via Ollama Modelfile</p>
+    </div>
+  </div>
+
+  <h2>Draft-Refine Architecture</h2>
+  <div class="flow-diagram">
+<pre>
+  User Request
+       │
+       ▼
+  ┌─────────────────────┐
+  │    Task Router       │   7 task types × routing rules
+  └──────┬──────────────┘
+         │
+    ┌────┼────────────────────┐
+    │    │                    │
+    ▼    ▼                    ▼
+  LOCAL ONLY    DUAL MODE    CLOUD ONLY
+    │           │    │           │
+    │      ┌────▼─┐  │           │
+    │      │LLaMA │  │           │
+    │      │Draft │  │           │
+    │      └──┬───┘  │           │
+    │         │      │           │
+    │    ┌────▼──────▼────┐      │
+    │    │ Gemini Refine?  │      │
+    │    │ (if available)  │      │
+    │    └──────┬──────────┘      │
+    │           │                 │
+    └───────────┴─────────────────┘
+                │
+                ▼
+          Final Result
+</pre>
+  </div>
+
+  <h2>Task Routing Rules</h2>
+  <div class="grid grid-2">
+    <div class="card" style="border-left:3px solid var(--accent3)"><h3>🟢 LLaMA Only (Local)</h3><p><strong>Code Review</strong> — fast validation<br><strong>Section Planning</strong> — structured JSON<br><strong>Validation</strong> — speed-critical checks</p></div>
+    <div class="card" style="border-left:3px solid var(--accent2)"><h3>🟣 Dual (Draft → Refine)</h3><p><strong>Brief Generation</strong> — LLaMA drafts, Gemini enhances<br><strong>Style Suggestion</strong> — best of both<br><strong>Content Writing</strong> — speed + creativity</p></div>
+    <div class="card" style="border-left:3px solid var(--accent)"><h3>🔵 Gemini Only (Cloud)</h3><p><strong>Trend Analysis</strong> — requires multi-modal vision for image analysis</p></div>
+    <div class="card" style="border-left:3px solid var(--accent-warn)"><h3>🟡 Auto Route</h3><p><strong>General tasks</strong> — picks provider based on real-time availability of both services</p></div>
+  </div>
+
+  <h2>API Endpoints</h2>
+  <div class="grid grid-3">
+    <div class="card"><code>POST /llm/query</code><p style="margin-top:0.5rem;font-size:0.85rem">Direct query with task_type routing and provider override.</p></div>
+    <div class="card"><code>GET /llm/stats</code><p style="margin-top:0.5rem;font-size:0.85rem">Usage stats: call counts, failure rates, avg latency per provider.</p></div>
+    <div class="card"><code>GET /llm/models</code><p style="margin-top:0.5rem;font-size:0.85rem">List available local Ollama models and active model name.</p></div>
+  </div>
+
+  <h2>Custom Model: mcp-brain:latest</h2>
+  <div class="json-block"><span class="jc">// Ollama Modelfile — models/Modelfile.mcp-brain</span>
+<span class="jk">FROM</span> <span class="jv">llama3.2:3b</span>
+<span class="jk">SYSTEM</span> <span class="jv">"You are MCP-Brain, an expert AI UI/UX product architect..."</span>
+<span class="jk">PARAMETER</span> temperature <span class="jn">0.3</span>     <span class="jc">// low temp for deterministic JSON</span>
+<span class="jk">PARAMETER</span> top_p <span class="jn">0.85</span>
+<span class="jk">PARAMETER</span> num_predict <span class="jn">2048</span></div>
+
+  <h2>Verified Test Results</h2>
+  <div class="grid grid-3">
+    <div class="card" style="border-left:3px solid var(--accent3)"><h3>✅ Section Planning</h3><p>LLaMA LOCAL<br>Valid JSON, 6 sections<br>76s cold / 13s warm</p></div>
+    <div class="card" style="border-left:3px solid var(--accent3)"><h3>✅ Brief Generation</h3><p>DUAL mode<br>Full design brief JSON<br>Graceful Gemini fallback</p></div>
+    <div class="card" style="border-left:3px solid var(--accent3)"><h3>✅ Code Validation</h3><p>LLaMA LOCAL<br>{valid: true, issues: []}<br>13s inference</p></div>
+  </div>
+</section>
+
+</main>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+class LocalSync:
+    pass

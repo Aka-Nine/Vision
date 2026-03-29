@@ -1,0 +1,337 @@
+{
+  "layout_type": "landing_page",
+  "page": [
+    "Navbar",
+    "HeroSection",
+    "FeaturesSection",
+    "VideoSection",
+    "AboutSection",
+    "UseCasesSection",
+    "Footer"
+  ],
+  "sections": [
+    {
+      "key": "navbar",
+      "component": "Navbar",
+      "grid": "full-width",
+      "padding": "py-4",
+      "sticky": true,
+      "style_overrides": {
+        "theme": "light",
+        "glass": false
+      },
+      "component_spec": {
+        "id": "navbar",
+        "tag": "nav",
+        "component_name": "Navbar",
+        "classes": "fixed top-0 w-full z-50 backdrop-blur-md",
+        "props": {
+          "sticky": true,
+          "height": "72px",
+          "use_micro_interactions": true
+        },
+        "children": [
+          {
+            "id": "logo",
+            "tag": "div",
+            "component_name": "Logo"
+          },
+          {
+            "id": "nav_links",
+            "tag": "ul",
+            "component_name": "NavLinks",
+            "props": {
+              "min_items": 3,
+              "max_items": 7
+            }
+          },
+          {
+            "id": "cta_button",
+            "tag": "button",
+            "component_name": "NavCTA",
+            "props": {
+              "variant": "primary",
+              "size": "sm"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "key": "hero",
+      "component": "HeroSection",
+      "grid": "full-width",
+      "padding": "py-32",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "light",
+        "glass": false
+      },
+      "height": "auto",
+      "alignment": "left",
+      "padding_top": "0px",
+      "padding_bottom": "40px",
+      "z_index": 20,
+      "position": "relative",
+      "_spatial_source": "ui_ast",
+      "component_spec": {
+        "id": "hero",
+        "tag": "section",
+        "component_name": "HeroSection",
+        "classes": "relative overflow-hidden",
+        "props": {
+          "min_height": "80vh",
+          "layout": "two_column",
+          "use_micro_interactions": true
+        },
+        "children": [
+          {
+            "id": "hero_left",
+            "tag": "div",
+            "component_name": "HeroContent",
+            "children": [
+              {
+                "id": "badge",
+                "tag": "span",
+                "component_name": "HeroBadge"
+              },
+              {
+                "id": "heading",
+                "tag": "h1",
+                "component_name": "HeroHeading",
+                "props": {
+                  "max_length": 60
+                }
+              },
+              {
+                "id": "subtext",
+                "tag": "p",
+                "component_name": "HeroSubtext",
+                "props": {
+                  "max_length": 140
+                }
+              },
+              {
+                "id": "cta_group",
+                "tag": "div",
+                "component_name": "HeroCTAGroup",
+                "props": {
+                  "max_buttons": 2
+                }
+              }
+            ]
+          },
+          {
+            "id": "hero_right",
+            "tag": "div",
+            "component_name": "HeroVisual",
+            "children": [
+              {
+                "id": "image_mockup",
+                "tag": "div",
+                "component_name": "HeroImage"
+              }
+            ]
+          }
+        ]
+      },
+      "layout_mode": "two_column",
+      "hero_alignment": "center",
+      "cta_style": "single"
+    },
+    {
+      "key": "features",
+      "component": "FeaturesSection",
+      "grid": "3-col",
+      "padding": "py-24",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "light",
+        "glass": false
+      },
+      "height": "auto",
+      "alignment": "left",
+      "padding_top": "0px",
+      "padding_bottom": "40px",
+      "z_index": 5,
+      "position": "relative",
+      "_spatial_source": "ui_ast",
+      "component_spec": {
+        "id": "features",
+        "tag": "section",
+        "component_name": "FeaturesSection",
+        "classes": "relative",
+        "props": {
+          "grid_cols": 3,
+          "layout": "grid",
+          "style": "cards",
+          "use_micro_interactions": true
+        },
+        "children": [
+          {
+            "id": "features_heading",
+            "tag": "h2",
+            "component_name": "FeaturesHeading"
+          },
+          {
+            "id": "features_subtext",
+            "tag": "p",
+            "component_name": "FeaturesSubtext"
+          },
+          {
+            "id": "feature_items",
+            "tag": "div",
+            "component_name": "FeatureGrid",
+            "props": {
+              "min_count": 3,
+              "max_count": 6
+            }
+          }
+        ]
+      },
+      "layout_mode": "grid",
+      "feature_style": "cards"
+    },
+    {
+      "key": "video",
+      "component": "VideoSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "light",
+        "glass": false
+      },
+      "height": "auto",
+      "alignment": "left",
+      "padding_top": "0px",
+      "padding_bottom": "40px",
+      "z_index": 5,
+      "position": "relative",
+      "_spatial_source": "ui_ast",
+      "component_spec": {
+        "id": "video",
+        "tag": "section",
+        "component_name": "VideoSection",
+        "classes": "relative",
+        "props": {
+          "use_micro_interactions": true
+        },
+        "children": []
+      }
+    },
+    {
+      "key": "about",
+      "component": "AboutSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "light",
+        "glass": false
+      },
+      "height": "auto",
+      "alignment": "left",
+      "padding_top": "0px",
+      "padding_bottom": "40px",
+      "z_index": 5,
+      "position": "relative",
+      "_spatial_source": "ui_ast",
+      "component_spec": {
+        "id": "about",
+        "tag": "section",
+        "component_name": "AboutSection",
+        "classes": "relative",
+        "props": {
+          "use_micro_interactions": true
+        },
+        "children": []
+      }
+    },
+    {
+      "key": "use_cases",
+      "component": "UseCasesSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "light",
+        "glass": false
+      },
+      "height": "auto",
+      "alignment": "left",
+      "padding_top": "0px",
+      "padding_bottom": "40px",
+      "z_index": 5,
+      "position": "relative",
+      "_spatial_source": "ui_ast",
+      "component_spec": {
+        "id": "use_cases",
+        "tag": "section",
+        "component_name": "UseCasesSection",
+        "classes": "relative",
+        "props": {
+          "use_micro_interactions": true
+        },
+        "children": []
+      }
+    },
+    {
+      "key": "footer",
+      "component": "Footer",
+      "grid": "4-col",
+      "padding": "py-12",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "light",
+        "glass": false
+      },
+      "height": "auto",
+      "alignment": "left",
+      "padding_top": "0px",
+      "padding_bottom": "40px",
+      "z_index": 5,
+      "position": "relative",
+      "_spatial_source": "ui_ast",
+      "component_spec": {
+        "id": "footer",
+        "tag": "footer",
+        "component_name": "Footer",
+        "classes": "border-t",
+        "props": {
+          "grid_cols": 4,
+          "use_micro_interactions": true
+        },
+        "children": [
+          {
+            "id": "footer_links",
+            "tag": "div",
+            "component_name": "FooterLinks"
+          },
+          {
+            "id": "copyright",
+            "tag": "div",
+            "component_name": "Copyright"
+          }
+        ]
+      }
+    }
+  ],
+  "responsive": {
+    "breakpoints": {
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1536px"
+    },
+    "mobile_first": true,
+    "container_max_width": "1280px"
+  },
+  "meta": {
+    "template_type": "Landing Page",
+    "section_count": 7,
+    "ast_powered": true,
+    "variation": "centered"
+  }
+}

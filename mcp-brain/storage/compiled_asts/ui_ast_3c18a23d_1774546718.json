@@ -1,0 +1,596 @@
+{
+  "version": "1.0",
+  "meta": {
+    "template_id": "3c18a23d-0a24-46fe-812e-e3ec809b30cc",
+    "created_at": "2026-03-26T17:38:38Z",
+    "source": "market_intelligence",
+    "design_system": "dark_ai_saas_dark",
+    "variation_seed": 4727,
+    "product_type": "AI-Powered SaaS Analytics Dashboard",
+    "target_market": "B2B SaaS Founders and CTOs",
+    "complexity_tier": "rich"
+  },
+  "layout_tree": {
+    "id": "root",
+    "type": "page",
+    "layout": "vertical",
+    "children": [
+      {
+        "id": "navbar",
+        "type": "section",
+        "role": "navbar",
+        "layout": "full-width",
+        "props": {
+          "sticky": true,
+          "height": "72px"
+        },
+        "children": [
+          {
+            "id": "logo",
+            "type": "element"
+          },
+          {
+            "id": "nav_links",
+            "type": "element"
+          },
+          {
+            "id": "cta_button",
+            "type": "element"
+          }
+        ]
+      },
+      {
+        "id": "hero",
+        "type": "section",
+        "role": "hero",
+        "layout": "two_column",
+        "props": {
+          "min_height": "80vh",
+          "layout": "two_column"
+        },
+        "children": [
+          {
+            "id": "hero_left",
+            "type": "container",
+            "children": [
+              {
+                "id": "badge",
+                "type": "element"
+              },
+              {
+                "id": "heading",
+                "type": "element"
+              },
+              {
+                "id": "subtext",
+                "type": "element"
+              },
+              {
+                "id": "cta_group",
+                "type": "element"
+              }
+            ]
+          },
+          {
+            "id": "hero_right",
+            "type": "container",
+            "children": [
+              {
+                "id": "image_mockup",
+                "type": "element"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "features",
+        "type": "section",
+        "role": "features",
+        "layout": "grid",
+        "props": {
+          "grid_cols": 3,
+          "layout": "grid"
+        },
+        "children": [
+          {
+            "id": "features_heading",
+            "type": "element"
+          },
+          {
+            "id": "features_subtext",
+            "type": "element"
+          },
+          {
+            "id": "feature_items",
+            "type": "element"
+          }
+        ]
+      },
+      {
+        "id": "pricing",
+        "type": "section",
+        "role": "pricing",
+        "layout": "grid",
+        "props": {
+          "grid_cols": 3,
+          "layout": "grid"
+        },
+        "children": [
+          {
+            "id": "pricing_heading",
+            "type": "element"
+          },
+          {
+            "id": "plan_cards",
+            "type": "element"
+          }
+        ]
+      },
+      {
+        "id": "testimonials",
+        "type": "section",
+        "role": "testimonials",
+        "layout": "grid",
+        "props": {
+          "grid_cols": 2,
+          "layout": "grid"
+        },
+        "children": [
+          {
+            "id": "testimonials_heading",
+            "type": "element"
+          },
+          {
+            "id": "testimonial_cards",
+            "type": "element"
+          }
+        ]
+      },
+      {
+        "id": "footer",
+        "type": "section",
+        "role": "footer",
+        "layout": "full-width",
+        "props": {
+          "grid_cols": 4
+        },
+        "children": [
+          {
+            "id": "footer_links",
+            "type": "element"
+          },
+          {
+            "id": "copyright",
+            "type": "element"
+          }
+        ]
+      }
+    ]
+  },
+  "design_tokens": {
+    "theme": "dark",
+    "color_palette": {
+      "primary": "#6366F1",
+      "secondary": "#EC4899",
+      "background": "#020617",
+      "surface": "rgba(255,255,255,0.03)",
+      "text_primary": "#F8FAFC",
+      "text_secondary": "#64748B",
+      "accent_gradient_start": "#6366F1",
+      "accent_gradient_end": "#EC4899"
+    },
+    "typography": {
+      "font_family": "Inter",
+      "heading_scale": [
+        "56px",
+        "42px",
+        "32px",
+        "24px"
+      ],
+      "body_size": "18px",
+      "font_weight_heading": "800",
+      "font_weight_body": "400",
+      "line_height": "1.6",
+      "letter_spacing_heading": "-0.02em"
+    },
+    "spacing": {
+      "section_padding": "100px",
+      "container_width": "1200px",
+      "gap": "32px",
+      "content_padding": "24px"
+    },
+    "border_radius": "12px",
+    "shadow": "0 0 40px #6366F133",
+    "animation": {
+      "type": "scroll-reveal",
+      "duration": "0.8s",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "stagger_delay": "0.1s"
+    }
+  },
+  "components": {
+    "hero": {
+      "id": "hero",
+      "tag": "section",
+      "component_name": "HeroSection",
+      "classes": "relative overflow-hidden",
+      "props": {
+        "min_height": "80vh",
+        "layout": "two_column",
+        "use_particles": true,
+        "use_micro_interactions": true
+      },
+      "children": [
+        {
+          "id": "hero_left",
+          "tag": "div",
+          "component_name": "HeroContent",
+          "children": [
+            {
+              "id": "badge",
+              "tag": "span",
+              "component_name": "HeroBadge"
+            },
+            {
+              "id": "heading",
+              "tag": "h1",
+              "component_name": "HeroHeading",
+              "props": {
+                "max_length": 60
+              }
+            },
+            {
+              "id": "subtext",
+              "tag": "p",
+              "component_name": "HeroSubtext",
+              "props": {
+                "max_length": 140
+              }
+            },
+            {
+              "id": "cta_group",
+              "tag": "div",
+              "component_name": "HeroCTAGroup",
+              "props": {
+                "max_buttons": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "hero_right",
+          "tag": "div",
+          "component_name": "HeroVisual",
+          "children": [
+            {
+              "id": "image_mockup",
+              "tag": "div",
+              "component_name": "HeroImage"
+            }
+          ]
+        }
+      ]
+    },
+    "features": {
+      "id": "features",
+      "tag": "section",
+      "component_name": "FeaturesSection",
+      "classes": "relative",
+      "props": {
+        "grid_cols": 3,
+        "layout": "grid",
+        "style": "bento",
+        "use_micro_interactions": true
+      },
+      "children": [
+        {
+          "id": "features_heading",
+          "tag": "h2",
+          "component_name": "FeaturesHeading"
+        },
+        {
+          "id": "features_subtext",
+          "tag": "p",
+          "component_name": "FeaturesSubtext"
+        },
+        {
+          "id": "feature_items",
+          "tag": "div",
+          "component_name": "FeatureGrid",
+          "props": {
+            "min_count": 3,
+            "max_count": 6
+          }
+        }
+      ]
+    },
+    "pricing": {
+      "id": "pricing",
+      "tag": "section",
+      "component_name": "PricingSection",
+      "classes": "relative",
+      "props": {
+        "grid_cols": 3,
+        "layout": "grid",
+        "style": "columns",
+        "use_micro_interactions": true
+      },
+      "children": [
+        {
+          "id": "pricing_heading",
+          "tag": "h2",
+          "component_name": "PricingHeading"
+        },
+        {
+          "id": "plan_cards",
+          "tag": "div",
+          "component_name": "PlanGrid",
+          "props": {
+            "min_count": 2,
+            "max_count": 4,
+            "highlight_index": 1
+          }
+        }
+      ]
+    },
+    "testimonials": {
+      "id": "testimonials",
+      "tag": "section",
+      "component_name": "TestimonialsSection",
+      "classes": "relative",
+      "props": {
+        "grid_cols": 2,
+        "layout": "grid",
+        "style": "masonry",
+        "use_micro_interactions": true
+      },
+      "children": [
+        {
+          "id": "testimonials_heading",
+          "tag": "h2",
+          "component_name": "TestimonialsHeading"
+        },
+        {
+          "id": "testimonial_cards",
+          "tag": "div",
+          "component_name": "TestimonialGrid",
+          "props": {
+            "min_count": 2,
+            "max_count": 6
+          }
+        }
+      ]
+    }
+  },
+  "content_slots": {
+    "hero.heading": {
+      "slot_id": "hero.heading",
+      "type": "text",
+      "value": "Ship AI Products 10x Faster",
+      "max_length": 60,
+      "tone": "bold",
+      "target": "B2B SaaS Founders and CTOs"
+    },
+    "hero.subtext": {
+      "slot_id": "hero.subtext",
+      "type": "text",
+      "value": "The autonomous platform that turns market intelligence into production-ready UI.",
+      "max_length": 140,
+      "tone": "bold",
+      "target": "B2B SaaS Founders and CTOs"
+    },
+    "hero.cta.primary": {
+      "slot_id": "hero.cta.primary",
+      "type": "button_text",
+      "value": "Start Building",
+      "max_length": 25,
+      "style": "conversion-focused"
+    },
+    "hero.cta.secondary": {
+      "slot_id": "hero.cta.secondary",
+      "type": "button_text",
+      "value": "Watch Demo",
+      "max_length": 25,
+      "style": "informational"
+    },
+    "features.heading": {
+      "slot_id": "features.heading",
+      "type": "text",
+      "value": "Built for Speed & Scale",
+      "max_length": 60,
+      "tone": "technical",
+      "target": "B2B SaaS Founders and CTOs"
+    },
+    "features.subtext": {
+      "slot_id": "features.subtext",
+      "type": "text",
+      "value": "Everything you need to go from idea to deployed product.",
+      "max_length": 140,
+      "tone": "technical",
+      "target": "B2B SaaS Founders and CTOs"
+    },
+    "features.items": {
+      "slot_id": "features.items",
+      "type": "list",
+      "item_structure": {
+        "title": "text",
+        "description": "text",
+        "icon": "emoji"
+      },
+      "count": 3
+    },
+    "pricing.heading": {
+      "slot_id": "pricing.heading",
+      "type": "text",
+      "value": "Simple, Transparent Pricing",
+      "max_length": 60,
+      "tone": "direct",
+      "target": "B2B SaaS Founders and CTOs"
+    },
+    "pricing.subtext": {
+      "slot_id": "pricing.subtext",
+      "type": "text",
+      "max_length": 140,
+      "tone": "direct",
+      "target": "B2B SaaS Founders and CTOs"
+    },
+    "pricing.plans": {
+      "slot_id": "pricing.plans",
+      "type": "list",
+      "item_structure": {
+        "name": "text",
+        "price": "text",
+        "period": "text",
+        "features": "list",
+        "highlight": "boolean"
+      },
+      "count": 3
+    },
+    "testimonials.heading": {
+      "slot_id": "testimonials.heading",
+      "type": "text",
+      "value": "Loved by 500+ Teams",
+      "max_length": 60,
+      "tone": "authentic",
+      "target": "B2B SaaS Founders and CTOs"
+    },
+    "testimonials.subtext": {
+      "slot_id": "testimonials.subtext",
+      "type": "text",
+      "max_length": 140,
+      "tone": "authentic",
+      "target": "B2B SaaS Founders and CTOs"
+    }
+  },
+  "spatial_rules": {
+    "hero": {
+      "section_id": "hero",
+      "height": "80vh",
+      "alignment": "center",
+      "padding_top": "80px",
+      "padding_bottom": "80px",
+      "width_ratio": 1.0,
+      "z_index": 20,
+      "position": "relative"
+    },
+    "features": {
+      "section_id": "features",
+      "height": "60vh",
+      "alignment": "center",
+      "padding_top": "640px",
+      "padding_bottom": "60px",
+      "width_ratio": 1.0,
+      "z_index": 5,
+      "position": "relative"
+    },
+    "pricing": {
+      "section_id": "pricing",
+      "height": "auto",
+      "alignment": "center",
+      "padding_top": "80px",
+      "padding_bottom": "80px",
+      "width_ratio": 1.0,
+      "z_index": 5,
+      "position": "relative"
+    },
+    "testimonials": {
+      "section_id": "testimonials",
+      "height": "auto",
+      "alignment": "center",
+      "padding_top": "80px",
+      "padding_bottom": "80px",
+      "width_ratio": 1.0,
+      "z_index": 5,
+      "position": "relative"
+    }
+  },
+  "constraints": {
+    "required_sections": [
+      "navbar",
+      "hero",
+      "footer"
+    ],
+    "order": [
+      "navbar",
+      "hero",
+      "features",
+      "pricing",
+      "testimonials",
+      "footer"
+    ],
+    "rules": [
+      "hero must contain heading and cta",
+      "cta must be visible above fold",
+      "no empty containers",
+      "max 2 primary CTAs per section",
+      "navbar must exist at top",
+      "footer must exist at bottom"
+    ]
+  },
+  "variation": {
+    "variation_seed": 4727,
+    "layout_variant": "split",
+    "cta_style": "inline",
+    "hero_alignment": "left",
+    "feature_style": "bento",
+    "pricing_style": "columns",
+    "testimonial_style": "masonry",
+    "animation_intensity": "rich",
+    "color_mode": "neon"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "type": "deep_analysis",
+        "url": "https://example.com"
+      },
+      {
+        "type": "reddit",
+        "id": ""
+      },
+      {
+        "type": "pinterest",
+        "id": ""
+      }
+    ],
+    "screenshots": [
+      {
+        "section": "hero",
+        "bbox": [
+          0,
+          80,
+          1440,
+          700
+        ],
+        "bbox_used": true
+      },
+      {
+        "section": "features",
+        "bbox": [
+          0,
+          800,
+          1440,
+          500
+        ],
+        "bbox_used": true
+      }
+    ],
+    "dominant_pattern": "ai_saas_dark",
+    "discarded_patterns": [
+      "glass_dashboard",
+      "enterprise_saas"
+    ],
+    "demand_score": 0.88,
+    "trend_velocity": 72.5
+  },
+  "compiler_flags": {
+    "strict_mode": true,
+    "allow_llm_layout_changes": false,
+    "regenerate_on_failure": true,
+    "enforce_spatial_rules": true,
+    "demand_driven_complexity": true,
+    "max_sections": 8,
+    "min_sections": 3
+  }
+}

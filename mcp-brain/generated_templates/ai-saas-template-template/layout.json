@@ -1,0 +1,70 @@
+{
+  "layout_type": "landing_page",
+  "page": [
+    "GlobalHeaderSection",
+    "LeftSidebarNavigationSection",
+    "PinDetailCardContainerSection",
+    "RelatedPinsGridSection"
+  ],
+  "sections": [
+    {
+      "key": "global_header",
+      "component": "GlobalHeaderSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "dark",
+        "glass": true
+      }
+    },
+    {
+      "key": "left_sidebar_navigation",
+      "component": "LeftSidebarNavigationSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "dark",
+        "glass": true
+      }
+    },
+    {
+      "key": "pin_detail_card_container",
+      "component": "PinDetailCardContainerSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "dark",
+        "glass": true
+      }
+    },
+    {
+      "key": "related_pins_grid",
+      "component": "RelatedPinsGridSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "dark",
+        "glass": true
+      }
+    }
+  ],
+  "responsive": {
+    "breakpoints": {
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1536px"
+    },
+    "mobile_first": true,
+    "container_max_width": "1280px"
+  },
+  "meta": {
+    "template_type": "AI SaaS template Template",
+    "section_count": 4
+  }
+}

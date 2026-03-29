@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Google Antigravity - Experience liftoff with the next-generation AI IDE. An agent-first development platform evolving the IDE into the agent-first era.">
+    <title>Google Antigravity - Next-Generation AI IDE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sticky Navigation Header -->
+    <header class="site-header" id="site-header">
+        <nav class="nav-container">
+            <div class="nav-left">
+                <a href="#" class="logo" id="logo">
+                    <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L2 20h7l3-6 3 6h7L12 2z" fill="url(#logoGrad)"/>
+                        <defs>
+                            <linearGradient id="logoGrad" x1="2" y1="20" x2="22" y2="2">
+                                <stop offset="0%" stop-color="#4285F4"/>
+                                <stop offset="33%" stop-color="#34A853"/>
+                                <stop offset="66%" stop-color="#FBBC05"/>
+                                <stop offset="100%" stop-color="#EA4335"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="logo-text">Google <strong>Antigravity</strong></span>
+                </a>
+                <div class="nav-links">
+                    <a href="#product" class="nav-link" id="nav-product">Product</a>
+                    <div class="nav-dropdown">
+                        <a href="#use-cases" class="nav-link" id="nav-use-cases">Use Cases
+                            <span class="material-symbols-outlined nav-arrow">keyboard_arrow_down</span>
+                        </a>
+                    </div>
+                    <a href="#pricing" class="nav-link" id="nav-pricing">Pricing</a>
+                    <a href="#blog" class="nav-link" id="nav-blog">Blog</a>
+                    <div class="nav-dropdown">
+                        <a href="#resources" class="nav-link" id="nav-resources">Resources
+                            <span class="material-symbols-outlined nav-arrow">keyboard_arrow_down</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-right">
+                <a href="#download" class="download-btn" id="nav-download-btn">
+                    Download
+                    <span class="material-symbols-outlined">download</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <canvas id="particle-canvas"></canvas>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <svg class="hero-badge-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L2 20h7l3-6 3 6h7L12 2z" fill="url(#heroBadgeGrad)"/>
+                        <defs>
+                            <linearGradient id="heroBadgeGrad" x1="2" y1="20" x2="22" y2="2">
+                                <stop offset="0%" stop-color="#4285F4"/>
+                                <stop offset="33%" stop-color="#34A853"/>
+                                <stop offset="66%" stop-color="#FBBC05"/>
+                                <stop offset="100%" stop-color="#EA4335"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span>Google Antigravity</span>
+                </div>
+                <h1 class="hero-title" id="hero-title">
+                    Experience liftoff with the<br>next-generation IDE
+                </h1>
+                <div class="hero-ctas">
+                    <a href="#download" class="btn btn-primary" id="hero-download-btn">
+                        <svg class="windows-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M0 2.3l6.5-.9v6.3H0V2.3zm7.3-1l8.7-1.2v7.6H7.3V1.3zM16 8.5v7.6l-8.7-1.2V8.5H16zM6.5 14.7L0 13.8V8.5h6.5v6.2z"/>
+                        </svg>
+                        Download for Windows
+                    </a>
+                    <a href="#use-cases" class="btn btn-secondary" id="hero-explore-btn">Explore use cases</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- IDE Showcase Section -->
+        <section class="ide-showcase" id="ide-showcase">
+            <div class="ide-window" id="ide-window">
+                <div class="ide-header">
+                    <div class="ide-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="ide-tabs">
+                        <span class="ide-tab active">route.ts</span>
+                        <span class="ide-tab">layout.tsx</span>
+                        <span class="ide-tab">globals.css</span>
+                    </div>
+                </div>
+                <div class="ide-body">
+                    <div class="ide-sidebar">
+                        <div class="sidebar-icon active">
+                            <span class="material-symbols-outlined">folder</span>
+                        </div>
+                        <div class="sidebar-icon">
+                            <span class="material-symbols-outlined">search</span>
+                        </div>
+                        <div class="sidebar-icon">
+                            <span class="material-symbols-outlined">source_environment</span>
+                        </div>
+                        <div class="sidebar-icon">
+                            <span class="material-symbols-outlined">terminal</span>
+                        </div>
+                        <div class="sidebar-icon">
+                            <span class="material-symbols-outlined">auto_awesome</span>
+                        </div>
+                    </div>
+                    <div class="ide-code">
+                        <div class="code-line"><span class="line-num">1</span><span class="keyword">import</span> { <span class="variable">NextResponse</span> } <span class="keyword">from</span> <span class="string">'next/server'</span></div>
+                        <div class="code-line"><span class="line-num">2</span></div>
+                        <div class="code-line"><span class="line-num">3</span><span class="keyword">export async function</span> <span class="function">GET</span>(<span class="variable">request</span>: <span class="type">Request</span>) {</div>
+                        <div class="code-line"><span class="line-num">4</span>  <span class="keyword">const</span> { <span class="variable">searchParams</span> } = <span class="keyword">new</span> <span class="type">URL</span>(<span class="variable">request</span>.<span class="property">url</span>)</div>
+                        <div class="code-line"><span class="line-num">5</span>  <span class="keyword">const</span> <span class="variable">id</span> = <span class="variable">searchParams</span>.<span class="function">get</span>(<span class="string">'id'</span>)</div>
+                        <div class="code-line"><span class="line-num">6</span></div>
+                        <div class="code-line"><span class="line-num">7</span>  <span class="keyword">const</span> <span class="variable">data</span> = <span class="keyword">await</span> <span class="function">fetchData</span>(<span class="variable">id</span>)</div>
+                        <div class="code-line"><span class="line-num">8</span>  <span class="keyword">return</span> <span class="variable">NextResponse</span>.<span class="function">json</span>({ <span class="variable">data</span> })</div>
+                        <div class="code-line"><span class="line-num">9</span>}</div>
+                        <div class="code-line"><span class="line-num">10</span></div>
+                        <div class="code-line ghost-line"><span class="line-num">11</span><span class="ghost-text">export async function POST(request: Request) {</span></div>
+                        <div class="code-line ghost-line"><span class="line-num">12</span><span class="ghost-text">  const body = await request.json()</span></div>
+                        <div class="code-line ghost-line"><span class="line-num">13</span><span class="ghost-text">  // Process the incoming data...</span></div>
+                        <div class="code-line ghost-line"><span class="line-num">14</span><span class="ghost-text">}</span></div>
+                    </div>
+                    <div class="ide-agent-panel">
+                        <div class="agent-header">
+                            <span class="material-symbols-outlined">auto_awesome</span>
+                            <span>Antigravity Agent</span>
+                        </div>
+                        <div class="agent-message">
+                            <p>I've analyzed your route handler. Here's a suggested POST endpoint based on your current pattern:</p>
+                        </div>
+                        <div class="agent-input">
+                            <span class="material-symbols-outlined">edit</span>
+                            <span class="agent-placeholder">Ask Antigravity anything...</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Animated A logo overlay -->
+                <div class="ide-logo-overlay" id="ide-logo-overlay">
+                    <canvas id="a-logo-canvas"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Floating Icons Row -->
+        <section class="floating-icons" id="floating-icons">
+            <div class="icons-row">
+                <div class="float-icon"><span class="material-symbols-outlined">code</span></div>
+                <div class="float-icon"><span class="material-symbols-outlined">desktop_windows</span></div>
+                <div class="float-icon"><span class="material-symbols-outlined">sync_alt</span></div>
+                <div class="float-icon"><span class="material-symbols-outlined">undo</span></div>
+                <div class="float-icon"><span class="material-symbols-outlined">content_copy</span></div>
+                <div class="float-icon"><span class="material-symbols-outlined">share</span></div>
+                <div class="float-icon"><span class="material-symbols-outlined">link</span></div>
+                <div class="float-icon highlight"><span class="material-symbols-outlined">auto_awesome</span></div>
+                <div class="float-icon"><span class="material-symbols-outlined">conversion_path</span></div>
+                <div class="float-icon"><span class="material-symbols-outlined">data_object</span></div>
+                <div class="float-icon"><span class="material-symbols-outlined">refresh</span></div>
+                <div class="float-icon"><span class="material-symbols-outlined">keyboard_command_key</span></div>
+                <div class="float-icon"><span class="material-symbols-outlined">diamond</span></div>
+                <div class="float-icon"><span class="material-symbols-outlined">screenshot_frame</span></div>
+                <div class="float-icon"><span class="material-symbols-outlined">check_circle</span></div>
+                <div class="float-icon"><span class="material-symbols-outlined">call_made</span></div>
+                <div class="float-icon"><span class="material-symbols-outlined">dashboard</span></div>
+            </div>
+        </section>
+
+        <!-- Platform Statement -->
+        <section class="platform-statement" id="platform-statement">
+            <div class="container">
+                <h2 class="statement-text" id="statement-text">
+                    Google Antigravity is our agentic development platform, evolving the IDE into the agent-first era.
+                    <span class="statement-cursor">|</span>
+                </h2>
+            </div>
+        </section>
+
+        <!-- Feature Sections -->
+        <!-- Feature 1: AI IDE Core -->
+        <section class="feature-section" id="ai-ide-core">
+            <div class="feature-content">
+                <div class="feature-text">
+                    <h2 class="feature-title">An AI IDE Core</h2>
+                    <p class="feature-description">Google Antigravity's Editor view offers tab autocompletion, natural language code commands, and a configurable, and context-aware configurable agent.</p>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-card code-editor-card">
+                        <div class="mini-editor">
+                            <div class="mini-editor-header">
+                                <span class="mini-tab">route.ts</span>
+                            </div>
+                            <div class="mini-code">
+                                <div class="mini-line"><span class="ln">1</span><span class="kw">import</span> { NextResponse } <span class="kw">from</span> <span class="str">'next/server'</span></div>
+                                <div class="mini-line"><span class="ln">2</span></div>
+                                <div class="mini-line"><span class="ln">3</span><span class="kw">export async function</span> <span class="fn">GET</span>(req) {</div>
+                                <div class="mini-line completion"><span class="ln">4</span>  <span class="ghost">const data = await fetchData()</span></div>
+                            </div>
+                            <div class="tab-hint">
+                                <span class="material-symbols-outlined">keyboard_tab</span>
+                                Tab to accept
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature 2: Higher-level Abstractions -->
+        <section class="feature-section" id="higher-level">
+            <div class="feature-content">
+                <div class="feature-text">
+                    <h2 class="feature-title">Higher-level Abstractions</h2>
+                    <p class="feature-description">A more intuitive task-based approach to monitoring agent activity, presenting you with essential artifacts and verification results to build trust.</p>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-card task-card">
+                        <div class="task-header">
+                            <span class="task-icon material-symbols-outlined">assignment</span>
+                            <span class="task-count">4</span>
+                        </div>
+                        <div class="task-body">
+                            <div class="task-item">
+                                <span class="task-label">Build a Next.js app</span>
+                                <span class="task-status done">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                </span>
+                            </div>
+                            <div class="task-item">
+                                <span class="task-label">Set up authentication</span>
+                                <span class="task-status in-progress">
+                                    <span class="material-symbols-outlined">pending</span>
+                                </span>
+                            </div>
+                            <div class="task-item">
+                                <span class="task-label">Design dashboard UI</span>
+                                <span class="task-status waiting">
+                                    <span class="material-symbols-outlined">schedule</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature 3: Cross-surface Agents -->
+        <section class="feature-section" id="cross-surface">
+            <div class="feature-content">
+                <div class="feature-text">
+                    <h2 class="feature-title">Cross-surface Agents</h2>
+                    <p class="feature-description">Synchronized agentic control across your editor, terminal, and browser for powerful development workflows.</p>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-card surfaces-card">
+                        <div class="surface-tabs">
+                            <span class="surface-tab active">
+                                <span class="material-symbols-outlined">edit_note</span> Editor
+                            </span>
+                            <span class="surface-tab">
+                                <span class="material-symbols-outlined">terminal</span> Terminal
+                            </span>
+                            <span class="surface-tab">
+                                <span class="material-symbols-outlined">language</span> Browser
+                            </span>
+                        </div>
+                        <div class="surface-content">
+                            <div class="sync-indicator">
+                                <div class="sync-dot"></div>
+                                <span>Agents synchronized</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature 4: User Feedback -->
+        <section class="feature-section" id="user-feedback">
+            <div class="feature-content">
+                <div class="feature-text">
+                    <h2 class="feature-title">User Feedback</h2>
+                    <p class="feature-description">Intuitively integrate feedback across surfaces and artifacts to guide and refine the agent's work.</p>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-card feedback-card">
+                        <div class="feedback-bubble agent-bubble">
+                            <p>I've finished building the Flight Tracker app. You can see a summary of the work and a verification video in the walkthrough.</p>
+                            <button class="review-btn">
+                                <span class="material-symbols-outlined">rate_review</span>
+                                Review
+                            </button>
+                        </div>
+                        <div class="feedback-input-bar">
+                            <span class="material-symbols-outlined">auto_awesome</span>
+                            <span class="feedback-placeholder">Give feedback or ask a follow-up...</span>
+                            <span class="material-symbols-outlined">send</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature 5: Agent-First Experience -->
+        <section class="feature-section" id="agent-first">
+            <div class="feature-content">
+                <div class="feature-text">
+                    <h2 class="feature-title">An Agent-First Experience</h2>
+                    <p class="feature-description">Manage multiple agents at the same time, across any workspace, from one central mission control view.</p>
+                    <a href="#product" class="btn btn-outline" id="explore-product-btn">Explore Product</a>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-card mission-control-card">
+                        <div class="mc-header">
+                            <div class="mc-tabs">
+                                <span class="mc-tab">+</span>
+                                <span class="mc-tab active">
+                                    <span class="material-symbols-outlined">expand_more</span> Planning
+                                </span>
+                                <span class="mc-tab">
+                                    <span class="material-symbols-outlined">expand_more</span> Gemini n...
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mc-body">
+                            <div class="mc-panel top-panel"></div>
+                            <div class="mc-panel bottom-panel">
+                                <div class="mc-inbox">
+                                    <span>Inbox</span>
+                                    <span class="material-symbols-outlined">search</span>
+                                </div>
+                                <div class="mc-task highlight-task">
+                                    <span class="mc-task-text">Design different mockups for a logo for my app</span>
+                                    <span class="mc-task-time">now</span>
+                                    <span class="mc-task-spinner"></span>
+                                    <div class="mc-task-project">flight-tracker</div>
+                                </div>
+                                <div class="mc-task">
+                                    <span class="mc-task-text">Aviation Stack API Research</span>
+                                    <span class="mc-task-time">57 secs ago</span>
+                                    <span class="mc-task-spinner"></span>
+                                    <div class="mc-task-project">flight-tracker</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Built for Developers Section -->
+        <section class="built-for-devs" id="built-for-devs">
+            <div class="container">
+                <div class="devs-header">
+                    <h2 class="devs-title">Built for developers<br>for the agent-first era</h2>
+                    <p class="devs-description">Google Antigravity is built for user trust, whether you're a professional developer working in a large enterprise codebase, a hobbyist vibe-coding in their spare time, or anyone in between.</p>
+                </div>
+                <div class="devs-carousel" id="devs-carousel">
+                    <div class="dev-card" id="dev-card-frontend">
+                        <div class="dev-card-visual">
+                            <div class="dev-card-label">Frontend<br>developer</div>
+                            <div class="dev-card-play">
+                                <span class="material-symbols-outlined">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="dev-card-info">
+                            <h3>Frontend developer</h3>
+                            <p>Streamline UX development by leveraging browser-in-the-loop agents to automate repetitive tasks.</p>
+                            <a href="#" class="view-case-link">View case <span class="material-symbols-outlined">chevron_right</span></a>
+                        </div>
+                    </div>
+                    <div class="dev-card" id="dev-card-fullstack">
+                        <div class="dev-card-visual fullstack">
+                            <div class="dev-card-label">Fullstack<br>developer</div>
+                            <div class="dev-card-play">
+                                <span class="material-symbols-outlined">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="dev-card-info">
+                            <h3>Fullstack developer</h3>
+                            <p>Build production-ready applications with integrated agents that understand your entire stack.</p>
+                            <a href="#" class="view-case-link">View case <span class="material-symbols-outlined">chevron_right</span></a>
+                        </div>
+                    </div>
+                    <div class="dev-card" id="dev-card-professional">
+                        <div class="dev-card-visual professional">
+                            <div class="dev-card-label">Professional<br>developer</div>
+                            <div class="dev-card-play">
+                                <span class="material-symbols-outlined">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="dev-card-info">
+                            <h3>Professional developer</h3>
+                            <p>Streamline operations across large enterprise codebases with the Agent Manager.</p>
+                            <a href="#" class="view-case-link">View case <span class="material-symbols-outlined">chevron_right</span></a>
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-btn prev" id="carousel-prev" aria-label="Previous card">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button class="carousel-btn next" id="carousel-next" aria-label="Next card">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- For Developers / For Organizations -->
+        <section class="cta-split" id="cta-split">
+            <div class="container">
+                <div class="cta-grid">
+                    <div class="cta-box devs-box" id="cta-developers">
+                        <canvas class="cta-particles" id="cta-particles-1"></canvas>
+                        <h3>For developers</h3>
+                        <p>Achieve new heights</p>
+                        <a href="#download" class="btn btn-primary small">Download</a>
+                    </div>
+                    <div class="cta-box orgs-box" id="cta-organizations">
+                        <canvas class="cta-particles" id="cta-particles-2"></canvas>
+                        <h3>For organizations</h3>
+                        <p>Level up your entire team</p>
+                        <a href="#" class="btn btn-outline small">Notify me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Blogs -->
+        <section class="latest-blogs" id="latest-blogs">
+            <div class="container">
+                <div class="blogs-header">
+                    <h2>Latest Blogs</h2>
+                    <a href="#" class="btn btn-outline small" id="view-blog-btn">View blog</a>
+                </div>
+                <div class="blogs-grid">
+                    <a href="#" class="blog-card" id="blog-card-1">
+                        <div class="blog-thumb gemini-pro">
+                            <span class="blog-title-overlay">Gemini 3.1 Pro</span>
+                        </div>
+                        <div class="blog-info">
+                            <h3>Gemini 3.1 Pro in Google Antigravity</h3>
+                            <span class="blog-date">Mar 2026</span>
+                        </div>
+                    </a>
+                    <a href="#" class="blog-card" id="blog-card-2">
+                        <div class="blog-thumb gemini-flash">
+                            <div class="gemini-icon-blog">✦</div>
+                            <span class="blog-title-overlay">Gemini 3 Flash</span>
+                        </div>
+                        <div class="blog-info">
+                            <h3>Gemini 3 Flash now available</h3>
+                            <span class="blog-date">Feb 2026</span>
+                        </div>
+                    </a>
+                    <a href="#" class="blog-card" id="blog-card-3">
+                        <div class="blog-thumb banana-card">
+                            <div class="banana-emoji">🍌</div>
+                        </div>
+                        <div class="blog-info">
+                            <h3>A new era of AI-powered development</h3>
+                            <span class="blog-date">Jan 2026</span>
+                        </div>
+                    </a>
+                    <a href="#" class="blog-card" id="blog-card-4">
+                        <div class="blog-thumb liftoff-card">
+                            <span class="blog-title-overlay small-text">Experience liftoff <span class="material-symbols-outlined">code</span></span>
+                        </div>
+                        <div class="blog-info">
+                            <h3>Experience liftoff with Antigravity</h3>
+                            <span class="blog-date">Dec 2025</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download CTA Section -->
+        <section class="download-cta" id="download">
+            <div class="download-cta-inner">
+                <canvas id="download-particles"></canvas>
+                <div class="download-content">
+                    <h2>Download Google<br>Antigravity for<br>Windows</h2>
+                    <div class="download-buttons">
+                        <a href="#" class="btn btn-white" id="download-x64-btn">Download for x64</a>
+                        <a href="#" class="btn btn-ghost" id="download-arm64-btn">Download for ARM64</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-cta">
+                    <span class="footer-tagline">Experience liftoff</span>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <a href="#">Download</a>
+                        <a href="#">Product</a>
+                        <a href="#">Docs</a>
+                        <a href="#">Changelog</a>
+                        <a href="#">Press</a>
+                        <a href="#">Releases</a>
+                    </div>
+                    <div class="footer-col">
+                        <a href="#">Blog</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">Use Cases</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-brand">
+                <span class="footer-mega-text">Antigravity</span>
+            </div>
+            <div class="footer-bottom">
+                <span class="footer-google">Google</span>
+                <div class="footer-legal">
+                    <a href="#">About Google</a>
+                    <a href="#">Google Products</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

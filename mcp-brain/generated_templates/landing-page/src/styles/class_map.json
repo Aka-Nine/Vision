@@ -1,0 +1,10 @@
+{
+  "container": "bg-white/60 backdrop-blur-lg border border-gray-200 rounded-xl",
+  "card": "bg-white/80 backdrop-blur-md border border-gray-200 rounded-2xl",
+  "button_primary": "bg-blue-600 hover:bg-blue-500 text-white rounded-xl shadow-lg shadow-blue-500/25",
+  "button_secondary": "bg-gray-100 hover:bg-gray-200 text-gray-900 border border-gray-300 rounded-xl",
+  "heading": "text-gray-900 font-extrabold",
+  "subtext": "text-gray-600",
+  "input": "bg-white border border-gray-300 text-gray-900 placeholder-gray-400 rounded-lg focus:ring-2 focus:ring-blue-500",
+  "badge": "bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm"
+}

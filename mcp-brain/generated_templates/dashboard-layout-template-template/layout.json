@@ -1,0 +1,106 @@
+{
+  "layout_type": "landing_page",
+  "page": [
+    "HeroDisplayPosterSection",
+    "SidebarNavigationSection",
+    "HeaderBarSection",
+    "DataOverviewCardsSection",
+    "SalesAndMetricsVisualizationSection",
+    "ListAndDetailsPanelsSection",
+    "PromotionalActionCardsSection"
+  ],
+  "sections": [
+    {
+      "key": "hero_display_poster",
+      "component": "HeroDisplayPosterSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "dark",
+        "glass": true
+      }
+    },
+    {
+      "key": "sidebar_navigation",
+      "component": "SidebarNavigationSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "dark",
+        "glass": true
+      }
+    },
+    {
+      "key": "header_bar",
+      "component": "HeaderBarSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "dark",
+        "glass": true
+      }
+    },
+    {
+      "key": "data_overview_cards",
+      "component": "DataOverviewCardsSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "dark",
+        "glass": true
+      }
+    },
+    {
+      "key": "sales_and_metrics_visualization",
+      "component": "SalesAndMetricsVisualizationSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "dark",
+        "glass": true
+      }
+    },
+    {
+      "key": "list_and_details_panels",
+      "component": "ListAndDetailsPanelsSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "dark",
+        "glass": true
+      }
+    },
+    {
+      "key": "promotional_action_cards",
+      "component": "PromotionalActionCardsSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "dark",
+        "glass": true
+      }
+    }
+  ],
+  "responsive": {
+    "breakpoints": {
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1536px"
+    },
+    "mobile_first": true,
+    "container_max_width": "1280px"
+  },
+  "meta": {
+    "template_type": "Dashboard Layout template Template",
+    "section_count": 7
+  }
+}

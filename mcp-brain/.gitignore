@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.env
+node_modules/
+dist/
+build/
+storage/visuals/
+storage/deep_analysis/
+storage/e2e_test_*.json
+generated_templates/*/node_modules/
+generated_templates/*/dist/
+.DS_Store

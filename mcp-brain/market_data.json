@@ -1,0 +1,24 @@
+{
+  "project_name": "Granger Sportainment",
+  "design_briefs": [
+    {
+      "category": "sports_tech",
+      "target_audience": "Athletes, Sports Fans",
+      "sections": [
+        "granger_header_hero",
+        "granger_bento_features",
+        "granger_events",
+        "granger_tracking",
+        "granger_dark_banner",
+        "granger_testimonials",
+        "granger_footer"
+      ],
+      "style": "light",
+      "color_palette": {
+        "primary": "#FF5A24",
+        "secondary": "#0D0D0D",
+        "background": "#F4F4F5"
+      }
+    }
+  ]
+}

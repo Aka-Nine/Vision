@@ -1,0 +1,208 @@
+{
+    "9ec773ec-4a67-4a5d-89df-350911c0cced": {
+        "pipeline_id": "9ec773ec-4a67-4a5d-89df-350911c0cced",
+        "current_stage": "completed",
+        "completed_stages": [
+            "started",
+            "running"
+        ],
+        "status": "completed",
+        "start_time": 1774432712.1999876,
+        "end_time": 1774432809.9518626,
+        "errors": []
+    },
+    "be951fa1-75f7-480c-b90c-e1cdd873c5ea": {
+        "pipeline_id": "be951fa1-75f7-480c-b90c-e1cdd873c5ea",
+        "current_stage": "completed",
+        "completed_stages": [
+            "started",
+            "running"
+        ],
+        "status": "completed",
+        "start_time": 1774438993.9890869,
+        "end_time": 1774438998.554998,
+        "errors": []
+    },
+    "739825a0-3574-4026-919a-f162670f70f8": {
+        "pipeline_id": "739825a0-3574-4026-919a-f162670f70f8",
+        "current_stage": "completed",
+        "completed_stages": [
+            "started",
+            "running"
+        ],
+        "status": "completed",
+        "start_time": 1774439413.2606606,
+        "end_time": 1774439415.7151818,
+        "errors": []
+    },
+    "c00c28ee-4e5b-488c-80cc-ae4a13064da9": {
+        "pipeline_id": "c00c28ee-4e5b-488c-80cc-ae4a13064da9",
+        "current_stage": "completed",
+        "completed_stages": [
+            "started",
+            "running"
+        ],
+        "status": "completed",
+        "start_time": 1774439646.7398047,
+        "end_time": 1774439649.2253284,
+        "errors": []
+    },
+    "793666ad-8cea-4d63-863a-bc5fe357cdc0": {
+        "pipeline_id": "793666ad-8cea-4d63-863a-bc5fe357cdc0",
+        "current_stage": "completed",
+        "completed_stages": [
+            "started",
+            "running"
+        ],
+        "status": "completed",
+        "start_time": 1774440284.4269106,
+        "end_time": 1774440287.4050527,
+        "errors": []
+    },
+    "7a96041f-9984-4750-96f8-8fdfce504c61": {
+        "pipeline_id": "7a96041f-9984-4750-96f8-8fdfce504c61",
+        "current_stage": "completed",
+        "completed_stages": [
+            "started",
+            "running"
+        ],
+        "status": "completed",
+        "start_time": 1774440370.8382494,
+        "end_time": 1774440382.6386397,
+        "errors": []
+    },
+    "327ec318-f116-4214-b135-44a8c8f9bdfe": {
+        "pipeline_id": "327ec318-f116-4214-b135-44a8c8f9bdfe",
+        "current_stage": "running",
+        "completed_stages": [
+            "started"
+        ],
+        "status": "running",
+        "start_time": 1774441409.4694655,
+        "end_time": null,
+        "errors": []
+    },
+    "f34d401a-5992-4450-90d0-ddd9b49fb37e": {
+        "pipeline_id": "f34d401a-5992-4450-90d0-ddd9b49fb37e",
+        "current_stage": "running",
+        "completed_stages": [
+            "started"
+        ],
+        "status": "running",
+        "start_time": 1774441470.7251487,
+        "end_time": null,
+        "errors": []
+    },
+    "51ef3142-6785-4165-a4fe-6f583bdb69db": {
+        "pipeline_id": "51ef3142-6785-4165-a4fe-6f583bdb69db",
+        "current_stage": "completed",
+        "completed_stages": [
+            "started",
+            "running"
+        ],
+        "status": "completed",
+        "start_time": 1774442482.0356832,
+        "end_time": 1774442656.838345,
+        "errors": []
+    },
+    "1d09a7db-c3fe-4fb3-91f4-a0b51bf90cb3": {
+        "pipeline_id": "1d09a7db-c3fe-4fb3-91f4-a0b51bf90cb3",
+        "current_stage": "completed",
+        "completed_stages": [
+            "started",
+            "running"
+        ],
+        "status": "completed",
+        "start_time": 1774442830.9602304,
+        "end_time": 1774443072.2737653,
+        "errors": []
+    },
+    "edbee1f1-1255-4156-9d9d-d8f9bdcd5ace": {
+        "pipeline_id": "edbee1f1-1255-4156-9d9d-d8f9bdcd5ace",
+        "current_stage": "completed",
+        "completed_stages": [
+            "started",
+            "running"
+        ],
+        "status": "completed",
+        "start_time": 1774443710.2746108,
+        "end_time": 1774443888.677917,
+        "errors": []
+    },
+    "bd48a3fd-4d7a-4c5a-93fa-2976338e2162": {
+        "pipeline_id": "bd48a3fd-4d7a-4c5a-93fa-2976338e2162",
+        "current_stage": "retrying_3",
+        "completed_stages": [
+            "started",
+            "failed_attempt"
+        ],
+        "status": "failed",
+        "start_time": 1774445248.5817637,
+        "end_time": 1774445254.998246,
+        "errors": [
+            "'dict' object has no attribute 'lower'"
+        ]
+    },
+    "9b173e07-93dd-4f6e-b66c-3f7698be589e": {
+        "pipeline_id": "9b173e07-93dd-4f6e-b66c-3f7698be589e",
+        "current_stage": "retrying_3",
+        "completed_stages": [
+            "started",
+            "failed_attempt"
+        ],
+        "status": "failed",
+        "start_time": 1774445416.7157066,
+        "end_time": 1774445423.125453,
+        "errors": [
+            "'dict' object has no attribute 'lower'"
+        ]
+    },
+    "1a19ecee-2d24-436f-b793-d767c7a8e8f7": {
+        "pipeline_id": "1a19ecee-2d24-436f-b793-d767c7a8e8f7",
+        "current_stage": "completed",
+        "completed_stages": [
+            "started",
+            "running"
+        ],
+        "status": "completed",
+        "start_time": 1774445468.4975362,
+        "end_time": 1774445842.1433578,
+        "errors": []
+    },
+    "08045e63-9118-4567-b18d-ac56fa614f2d": {
+        "pipeline_id": "08045e63-9118-4567-b18d-ac56fa614f2d",
+        "current_stage": "completed",
+        "completed_stages": [
+            "started",
+            "running"
+        ],
+        "status": "completed",
+        "start_time": 1774447086.0271711,
+        "end_time": 1774447427.126223,
+        "errors": []
+    },
+    "5f08af3a-257c-4406-a5eb-2ef5da845846": {
+        "pipeline_id": "5f08af3a-257c-4406-a5eb-2ef5da845846",
+        "current_stage": "completed",
+        "completed_stages": [
+            "started",
+            "running"
+        ],
+        "status": "completed",
+        "start_time": 1774448208.6137676,
+        "end_time": 1774448355.3549674,
+        "errors": []
+    },
+    "cdb25d05-7a38-4bde-8db1-6b42deaced7c": {
+        "pipeline_id": "cdb25d05-7a38-4bde-8db1-6b42deaced7c",
+        "current_stage": "completed",
+        "completed_stages": [
+            "started",
+            "running"
+        ],
+        "status": "completed",
+        "start_time": 1774449241.477638,
+        "end_time": 1774449582.4738746,
+        "errors": []
+    }
+}

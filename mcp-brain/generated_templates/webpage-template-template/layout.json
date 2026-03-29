@@ -1,0 +1,130 @@
+{
+  "layout_type": "landing_page",
+  "page": [
+    "HeroSection",
+    "ProductVideoSection",
+    "AgentFirstFeatureSectionSection",
+    "FeatureExplorerSection",
+    "UseCasesCarouselSection",
+    "SolutionsOfferingsPricingSection",
+    "LatestBlogsCarouselSection",
+    "DownloadCallToActionSection",
+    "GlobalFooterSection"
+  ],
+  "sections": [
+    {
+      "key": "hero",
+      "component": "HeroSection",
+      "grid": "full-width",
+      "padding": "py-32",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "dark",
+        "glass": true
+      }
+    },
+    {
+      "key": "product_video",
+      "component": "ProductVideoSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "dark",
+        "glass": true
+      }
+    },
+    {
+      "key": "agent_first_feature_section",
+      "component": "AgentFirstFeatureSectionSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "dark",
+        "glass": true
+      }
+    },
+    {
+      "key": "feature_explorer",
+      "component": "FeatureExplorerSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "dark",
+        "glass": true
+      }
+    },
+    {
+      "key": "use_cases_carousel",
+      "component": "UseCasesCarouselSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "dark",
+        "glass": true
+      }
+    },
+    {
+      "key": "solutions_offerings_pricing",
+      "component": "SolutionsOfferingsPricingSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "dark",
+        "glass": true
+      }
+    },
+    {
+      "key": "latest_blogs_carousel",
+      "component": "LatestBlogsCarouselSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "dark",
+        "glass": true
+      }
+    },
+    {
+      "key": "download_call_to_action",
+      "component": "DownloadCallToActionSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "dark",
+        "glass": true
+      }
+    },
+    {
+      "key": "global_footer",
+      "component": "GlobalFooterSection",
+      "grid": "full-width",
+      "padding": "py-16",
+      "sticky": false,
+      "style_overrides": {
+        "theme": "dark",
+        "glass": true
+      }
+    }
+  ],
+  "responsive": {
+    "breakpoints": {
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1536px"
+    },
+    "mobile_first": true,
+    "container_max_width": "1280px"
+  },
+  "meta": {
+    "template_type": "webpage template Template",
+    "section_count": 9
+  }
+}

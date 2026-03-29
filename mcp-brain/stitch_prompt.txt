@@ -1,0 +1,80 @@
+Design a premium AI SaaS template Template landing page for AI startups.
+Style: modern dark gradient.
+
+Typography: Use fonts similar to Google Sans Flex, Google Sans Code, Google Sans Code.
+Color palette: #121317, #121317, #45474d, #121317, #121317.
+
+The page should contain these sections in order:
+
+1. **Hero** (primary value proposition)
+   Layout: hero section with large headline, subtext, and two CTA buttons
+   Headline: "Experience liftoff with the next-generation IDE"
+   CTA buttons: "Download for Windows" and "Explore use cases"
+   Visual style: full-width, dramatic gradient background, floating particles, centered text
+
+2. **Video** (product showcase)
+   Layout: video embed or product screenshot with play button overlay
+   Headline: "TurboQuant: Redefining AI efficiency with extreme compression"
+   CTA buttons: "close"
+   Visual style: cinematic aspect ratio, dark overlay, centered play button
+
+3. **About** (brand story)
+   Layout: about section with team photo, mission statement, and values
+   Headline: "TurboQuant: Redefining AI efficiency with extreme compression"
+   Visual style: warm tones, personal photography, handwritten accents
+
+4. **Features** (capability highlight)
+   Layout: features grid with 3-6 feature cards, each with icon, title, and description
+   Headline: "TurboQuant: Redefining AI efficiency with extreme compression"
+   Subtext: "Google Antigravity's Editor view offers tab autocompletion, natural language code commands, and a configurable, and context-aware configurable agent."
+   CTA buttons: "Explore Product"
+   Visual style: clean card layout, subtle hover effects, consistent iconography
+
+5. **Use Cases** (social validation)
+   Layout: use cases section with audience segments and benefit descriptions
+   Headline: "Built for developersfor the agent-first era"
+   Subtext: "Google Antigravity is built for user trust, whether you're a professional developer working in a large enterprise codebase, a hobbyist vibe-coding in their spare time, or anyone in between."
+   CTA buttons: "View case" and "View case"
+   Visual style: alternating layout, profile icons, trust indicators
+
+6. **Pricing** (conversion)
+   Layout: pricing cards or download section with primary CTA
+   Headline: "TurboQuant: Redefining AI efficiency with extreme compression"
+   Subtext: "Available at no charge"
+   CTA buttons: "Download" and "Notify me"
+   Visual style: highlighted recommended plan, comparison table, urgency indicators
+
+7. **Section Wrapper** (general content)
+   Layout: content section with heading, description, and optional CTA
+   Headline: "TurboQuant: Redefining AI efficiency with extreme compression"
+   Subtext: "Available at no charge"
+   CTA buttons: "Notify me" and "Download"
+   Visual style: clean typography, generous whitespace, centered alignment
+
+8. **Blog** (content marketing)
+   Layout: blog post grid with thumbnails, titles, dates, and read more links
+   Headline: "TurboQuant: Redefining AI efficiency with extreme compression"
+   Subtext: "Gemini 3.1 Pro in Google Antigravity"
+   CTA buttons: "View blog" and "Introducing Google AntigravityNov 18, 2025ProductRead blog"
+   Visual style: card layout, category tags, reading time estimates
+
+9. **Cta** (conversion)
+   Layout: pricing cards or download section with primary CTA
+   Headline: "TurboQuant: Redefining AI efficiency with extreme compression"
+   CTA buttons: "Download for x64" and "Download for ARM64"
+   Visual style: highlighted recommended plan, comparison table, urgency indicators
+
+10. **Footer** (navigation)
+   Layout: footer with 4-column link grid, logo, and social icons
+   Headline: "TurboQuant: Redefining AI efficiency with extreme compression"
+   CTA buttons: "Download" and "Product"
+   Visual style: minimal, dark background, small text, subtle borders
+
+
+Quality requirements:
+- Pixel-perfect, production-ready design
+- Smooth scroll animations and micro-interactions
+- Fully responsive (mobile, tablet, desktop)
+- Dark mode with glassmorphism cards and gradient accents
+- Premium typography hierarchy with proper spacing
+- No placeholder images — use abstract geometric patterns or gradient fills

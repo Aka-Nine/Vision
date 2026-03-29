@@ -1,0 +1,30 @@
+[
+  {
+    "template_id": "fb77103d-58cb-4587-a0a8-6e1e740c89e1",
+    "timestamp": 1774548826.640906,
+    "ast_validation_score": 0.95,
+    "generation_success": true,
+    "dominant_pattern": "glass_dashboard",
+    "variation_seed": 8281,
+    "section_count": 7,
+    "content_fill_rate": 0.5882352941176471,
+    "build_errors": 0,
+    "generation_time_seconds": 347.55313515663147,
+    "demand_score": 0.5,
+    "complexity_tier": "standard"
+  },
+  {
+    "template_id": "caeeac60-e5b1-47ab-abaf-c23a6626b1b2",
+    "timestamp": 1774550738.7082515,
+    "ast_validation_score": 0.95,
+    "generation_success": true,
+    "dominant_pattern": "glass_dashboard",
+    "variation_seed": 8281,
+    "section_count": 7,
+    "content_fill_rate": 0.5882352941176471,
+    "build_errors": 0,
+    "generation_time_seconds": 339.92798018455505,
+    "demand_score": 0.5,
+    "complexity_tier": "rich"
+  }
+]

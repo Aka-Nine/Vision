@@ -1,0 +1,215 @@
+{
+    "schema_version": "1.0",
+    "generation_metadata": {
+        "generation_number": 1,
+        "started_at": "2026-03-18T22:51:38.671805",
+        "completed_at": "2026-03-18T22:53:23.025474",
+        "status": "completed",
+        "duration_seconds": 93.38,
+        "pipeline_id": "b1ea857b-1873-4783-8814-404bd720f024"
+    },
+    "trends": [
+        {
+            "trend": "UI for: Death to Scroll Fade",
+            "popularity_score": 0.88,
+            "source": "hacker_news_free_api"
+        },
+        {
+            "trend": "UI for: antigravity.google",
+            "popularity_score": 0.88,
+            "source": "hacker_news_free_api",
+            "reference_url": "https://antigravity.google/"
+        },
+        {
+            "trend": "UI for: antigravity.google",
+            "popularity_score": 0.88,
+            "source": "hacker_news_free_api",
+            "reference_url": "https://antigravity.google/"
+        }
+    ],
+    "design_references": [
+        {
+            "design_references": [
+                "https://placehold.co/400x300?text=Top Navigation Bar+reference",
+                "https://placehold.co/400x300?text=Left Vertical Navigation Bar+reference",
+                "https://placehold.co/400x300?text=Main Pin Closeup View+reference",
+                "https://placehold.co/400x300?text=Pin Details & Interactions+reference",
+                "https://placehold.co/400x300?text=Comments Section+reference",
+                "https://placehold.co/400x300?text=Related Pins Grid+reference"
+            ]
+        },
+        {
+            "design_references": [
+                "https://placehold.co/400x300?text=Hero Section+reference",
+                "https://placehold.co/400x300?text=Product Video+reference",
+                "https://placehold.co/400x300?text=Agent-First Feature Section+reference",
+                "https://placehold.co/400x300?text=Feature Explorer+reference",
+                "https://placehold.co/400x300?text=Use Cases Carousel+reference",
+                "https://placehold.co/400x300?text=Solutions/Offerings (Pricing)+reference",
+                "https://placehold.co/400x300?text=Latest Blogs Carousel+reference",
+                "https://placehold.co/400x300?text=Download Call-to-Action+reference",
+                "https://placehold.co/400x300?text=Global Footer+reference"
+            ]
+        },
+        {
+            "design_references": [
+                "https://placehold.co/400x300?text=Header/Navigation+reference",
+                "https://placehold.co/400x300?text=Hero Section (Welcome/CTA)+reference",
+                "https://placehold.co/400x300?text=Particle Background+reference",
+                "https://placehold.co/400x300?text=Video Showcase+reference",
+                "https://placehold.co/400x300?text=Agent-First Introduction+reference",
+                "https://placehold.co/400x300?text=Features Overview+reference",
+                "https://placehold.co/400x300?text=Use Cases+reference",
+                "https://placehold.co/400x300?text=Solutions/Pricing (Download options)+reference",
+                "https://placehold.co/400x300?text=Latest Blog Posts+reference",
+                "https://placehold.co/400x300?text=Final Download Call-to-action+reference",
+                "https://placehold.co/400x300?text=Footer Navigation+reference"
+            ]
+        }
+    ],
+    "ui_patterns": [
+        {
+            "layout_type": "Pin Detail Page Layout",
+            "structure": [
+                "Top Navigation Bar",
+                "Left Vertical Navigation Bar",
+                "Main Pin Closeup View",
+                "Pin Details & Interactions",
+                "Comments Section",
+                "Related Pins Grid"
+            ]
+        },
+        {
+            "layout_type": "webpage",
+            "structure": [
+                "Hero Section",
+                "Product Video",
+                "Agent-First Feature Section",
+                "Feature Explorer",
+                "Use Cases Carousel",
+                "Solutions/Offerings (Pricing)",
+                "Latest Blogs Carousel",
+                "Download Call-to-Action",
+                "Global Footer"
+            ]
+        },
+        {
+            "layout_type": "Linear webpage layout",
+            "structure": [
+                "Header/Navigation",
+                "Hero Section (Welcome/CTA)",
+                "Particle Background",
+                "Video Showcase",
+                "Agent-First Introduction",
+                "Features Overview",
+                "Use Cases",
+                "Solutions/Pricing (Download options)",
+                "Latest Blog Posts",
+                "Final Download Call-to-action",
+                "Footer Navigation"
+            ]
+        }
+    ],
+    "demand_scores": [
+        {
+            "template_type": "AI SaaS template",
+            "demand_score": 0.91,
+            "competition_score": 0.45
+        },
+        {
+            "template_type": "webpage template",
+            "demand_score": 0.21,
+            "competition_score": 0.5
+        },
+        {
+            "template_type": "AI SaaS template",
+            "demand_score": 0.91,
+            "competition_score": 0.45
+        }
+    ],
+    "design_briefs": [
+        {
+            "product_type": "AI SaaS template Template",
+            "target_market": "AI startups",
+            "style": "modern dark gradient",
+            "sections": [
+                "Top Navigation Bar",
+                "Left Vertical Navigation Bar",
+                "Main Pin Closeup View",
+                "Pin Details & Interactions",
+                "Comments Section",
+                "Related Pins Grid"
+            ],
+            "animation_type": "scroll reveal",
+            "demand_score": 0.91,
+            "_llm_provider": "gemini_cloud (llama unavailable)",
+            "quality_score": 1.0,
+            "provenance": {
+                "trend_source": "hacker_news_free_api",
+                "design_reference": "Scraped from Pinterest: Death to Scroll Fade",
+                "image_urls": [
+                    "https://i.pinimg.com/736x/34/5f/4e/345f4e6a4e144afeb57f44891e8232e1.jpg",
+                    "https://i.pinimg.com/videos/thumbnails/originals/5f/f0/05/5ff005a955ac28da3c6fdef23f08f556.0000000.jpg"
+                ],
+                "analysis_model": "gemini_2.5_pro",
+                "source_reputation": 0.6
+            }
+        },
+        {
+            "product_type": "webpage template Template",
+            "target_market": "AI startups",
+            "style": "modern dark gradient",
+            "sections": [
+                "Hero Section",
+                "Product Video",
+                "Agent-First Feature Section",
+                "Feature Explorer",
+                "Use Cases Carousel",
+                "Solutions/Offerings (Pricing)",
+                "Latest Blogs Carousel",
+                "Download Call-to-Action",
+                "Global Footer"
+            ],
+            "animation_type": "scroll reveal",
+            "demand_score": 0.21,
+            "_llm_provider": "gemini_cloud (llama unavailable)",
+            "quality_score": 1.0,
+            "provenance": {
+                "trend_source": "hacker_news_free_api",
+                "design_reference": "Deep Scraped Live Website: https://antigravity.google/",
+                "image_urls": [],
+                "analysis_model": "gemini_2.5_pro",
+                "source_reputation": 0.9
+            }
+        },
+        {
+            "product_type": "AI SaaS template Template",
+            "target_market": "AI startups",
+            "style": "modern dark gradient",
+            "sections": [
+                "Header/Navigation",
+                "Hero Section (Welcome/CTA)",
+                "Particle Background",
+                "Video Showcase",
+                "Agent-First Introduction",
+                "Features Overview",
+                "Use Cases",
+                "Solutions/Pricing (Download options)",
+                "Latest Blog Posts",
+                "Final Download Call-to-action",
+                "Footer Navigation"
+            ],
+            "animation_type": "scroll reveal",
+            "demand_score": 0.91,
+            "_llm_provider": "gemini_cloud (llama unavailable)",
+            "quality_score": 1.0,
+            "provenance": {
+                "trend_source": "hacker_news_free_api",
+                "design_reference": "Deep Scraped Live Website: https://antigravity.google/",
+                "image_urls": [],
+                "analysis_model": "gemini_2.5_pro",
+                "source_reputation": 0.9
+            }
+        }
+    ]
+}

@@ -1,0 +1,69 @@
+{
+  "sections": [
+    {
+      "key": "granger_header_hero",
+      "component": "GrangerHeroSection",
+      "heading": "Granger",
+      "description": "A new species of sportainment. Basketball, Tennis, Performance.",
+      "cta_texts": ["Discover Sports", "Watch Video"]
+    },
+    {
+      "key": "granger_bento_features",
+      "component": "GrangerBentoSection",
+      "heading": "Explore our flexible activity.",
+      "description": "Smart features designed for more with you - fast, flexible, and built for everyday action. Visionary Precision Play.",
+      "cta_texts": ["Eating After The Game", "Game Zones"]
+    },
+    {
+      "key": "granger_events",
+      "component": "GrangerEventsSection",
+      "heading": "Elevate your experience with handpicked featured.",
+      "description": "The coach experts and simple software for better sportainment. Chemistry Sports Partner.",
+      "cta_texts": ["Book Out", "Live"]
+    },
+    {
+      "key": "granger_tracking",
+      "component": "GrangerTrackingSection",
+      "heading": "Stay motivated with activity tracking.",
+      "description": "Record - analytics to boost your performance. WITH GPT 4.0",
+      "cta_texts": ["Explore More", "More Detail"]
+    },
+    {
+      "key": "granger_dark_banner",
+      "component": "GrangerDarkBannerSection",
+      "heading": "To win over sports-minded consumers with products own technology and excellent.",
+      "description": "Online Fitness Challenge. Youth Sports Camp - 20yo. Obstacle Course Race. Sport x Game Day. Trainer Meet & Great.",
+      "cta_texts": ["Register", "Learn More"]
+    },
+    {
+      "key": "granger_testimonials",
+      "component": "GrangerTestimonialsSection",
+      "heading": "What people are honestly saying right now",
+      "description": "The activity tracker keeps me on track, and the community pushes me to keep going. It's the perfect mix of fun and fitness.",
+      "cta_texts": ["Show All", "Leave Review"]
+    },
+    {
+      "key": "granger_footer",
+      "component": "GrangerFooterSection",
+      "heading": "We're doing everything for future healthiness.",
+      "description": "Explore More. Privacy Policy. Terms & Conditions. Copyright 2026 Granger.",
+      "cta_texts": ["Facebook", "Instagram", "LinkedIn", "Twitter"]
+    }
+  ],
+  "source_metadata": {},
+  "design_tokens": {
+    "colors": {
+      "primary": "#FF5A24",
+      "spotlight": "#0D0D0D",
+      "background": "#F4F4F5"
+    },
+    "typography": {
+      "heading": "font-black tracking-tighter",
+      "body": "text-gray-600"
+    }
+  },
+  "market_context": {
+    "category": "sports_tech",
+    "trends": ["bento_grids", "oversized_typography", "vibrant_accents"]
+  }
+}

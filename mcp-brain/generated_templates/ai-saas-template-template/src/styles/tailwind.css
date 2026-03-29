@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-accent: #6366f1;
+    --color-surface: #1e1b4b;
+  }
+
+  body {
+    @apply antialiased;
+    background-color: #1e1b4b;
+    color: #f8fafc;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.1) transparent;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl;
+  }
+
+  .glass-card-light {
+    @apply bg-white/60 backdrop-blur-lg border border-gray-200 rounded-2xl;
+  }
+
+  .gradient-accent {
+    background: linear-gradient(135deg, #6366f1, color-mix(in srgb, #6366f1 60%, #ec4899));
+  }
+}

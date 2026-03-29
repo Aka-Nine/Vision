@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation Showcase — Every Effect Demonstrated</title>
+  <meta name="description" content="Comprehensive animation showcase demonstrating GSAP, ScrollTrigger, SplitText, Lenis, particles, parallax, glassmorphism, and more.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Lenis Smooth Scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.19/dist/lenis.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 0: Custom Cursor                                -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 1: Glassmorphism Navigation                     -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <header class="nav-glass" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">◆</span>
+        <span class="logo-text">Showcase</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#hero" class="nav-link" data-magnetic>Hero</a>
+        <a href="#text" class="nav-link" data-magnetic>Text</a>
+        <a href="#parallax" class="nav-link" data-magnetic>Parallax</a>
+        <a href="#cards" class="nav-link" data-magnetic>Cards</a>
+        <a href="#particles" class="nav-link" data-magnetic>Particles</a>
+        <a href="#marquee" class="nav-link" data-magnetic>Marquee</a>
+        <a href="#morphing" class="nav-link" data-magnetic>Morphing</a>
+        <a href="#counter" class="nav-link" data-magnetic>Counter</a>
+      </nav>
+      <a href="#cta" class="nav-cta magnetic-btn" data-magnetic>Get Started</a>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 2: Hero with Canvas Particles + GSAP Timeline   -->
+  <!-- Effect: Particle vortex + staggered text reveal          -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge" id="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Every Animation Technique</span>
+      </div>
+      <h1 class="hero-title" id="hero-title">
+        <span class="line">The Ultimate</span>
+        <span class="line">Animation <span class="gradient-text">Showcase</span></span>
+      </h1>
+      <p class="hero-desc" id="hero-desc">
+        GSAP · ScrollTrigger · SplitText · Lenis · Canvas Particles · Parallax · 
+        Glassmorphism · Magnetic Buttons · Marquee · SVG Morphing · Counter Animations
+      </p>
+      <div class="hero-btns" id="hero-btns">
+        <a href="#text" class="btn btn-primary magnetic-btn" data-magnetic>
+          <span>Explore Effects</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#docs" class="btn btn-secondary magnetic-btn" data-magnetic>
+          <span>Read Docs</span>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-indicator" id="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 3: GSAP SplitText Animations                    -->
+  <!-- Effect: Character-by-character reveal, word stagger      -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="text-section" id="text">
+    <div class="container">
+      <div class="section-label">01 — Text Animations</div>
+      <h2 class="split-chars" data-effect="chars">
+        Characters split &amp; animated individually
+      </h2>
+      <p class="split-words" data-effect="words">
+        Each word fades up from below with a stagger delay, 
+        creating a natural reading flow that guides the eye.
+      </p>
+      <div class="split-lines-block">
+        <h3 class="split-lines" data-effect="lines">
+          Lines reveal one by one as you scroll into view. 
+          This mimics the Antigravity hero text effect perfectly.
+        </h3>
+      </div>
+      <div class="text-effect-grid">
+        <div class="text-card" data-effect="typewriter">
+          <span class="text-label">Typewriter</span>
+          <p class="typewriter-text" id="typewriter">The future of web animation is here.</p>
+        </div>
+        <div class="text-card" data-effect="scramble">
+          <span class="text-label">Text Scramble</span>
+          <p class="scramble-text" id="scramble">Decode this message</p>
+        </div>
+        <div class="text-card" data-effect="counter-text">
+          <span class="text-label">Counting Text</span>
+          <p class="counter-inline"><span class="count-up" data-target="99.9">0</span>% Smooth</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 4: Parallax Scrolling                           -->
+  <!-- Effect: Multi-layer depth parallax on scroll             -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="parallax-section" id="parallax">
+    <div class="parallax-bg">
+      <div class="parallax-layer" data-speed="-0.3">
+        <div class="para-shape shape-1"></div>
+        <div class="para-shape shape-2"></div>
+      </div>
+      <div class="parallax-layer" data-speed="-0.15">
+        <div class="para-shape shape-3"></div>
+        <div class="para-shape shape-4"></div>
+      </div>
+      <div class="parallax-layer" data-speed="0.1">
+        <div class="para-shape shape-5"></div>
+      </div>
+    </div>
+    <div class="container parallax-content">
+      <div class="section-label">02 — Parallax</div>
+      <h2 class="parallax-title" data-speed="-0.05">Multi-Layer<br>Depth Parallax</h2>
+      <p class="parallax-desc" data-speed="0.05">
+        Background layers move at different speeds relative to the scroll position,
+        creating an illusion of 3D depth. Each shape has its own speed factor.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 5: Scroll-Pinned Feature Cards                  -->
+  <!-- Effect: GSAP ScrollTrigger pin + horizontal scroll       -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="cards-section" id="cards">
+    <div class="container">
+      <div class="section-label">03 — ScrollTrigger Pin</div>
+      <h2 class="section-title reveal-up">Horizontal Scroll Cards</h2>
+      <p class="section-desc reveal-up">Pinned section that scrolls horizontally — a signature GSAP ScrollTrigger effect.</p>
+    </div>
+    <div class="cards-track-wrapper">
+      <div class="cards-track" id="cards-track">
+        <div class="feature-card" style="--card-accent: #4285f4">
+          <div class="card-icon">⚡</div>
+          <h3>GSAP Timeline</h3>
+          <p>Chain animations with precise timing control, easing, and duration management.</p>
+          <code>gsap.timeline().to(...)</code>
+        </div>
+        <div class="feature-card" style="--card-accent: #ea4335">
+          <div class="card-icon">📜</div>
+          <h3>ScrollTrigger</h3>
+          <p>Trigger animations at exact scroll positions with scrub, pin, and snap.</p>
+          <code>ScrollTrigger.create({...})</code>
+        </div>
+        <div class="feature-card" style="--card-accent: #fbbc04">
+          <div class="card-icon">✂️</div>
+          <h3>SplitText</h3>
+          <p>Split text into characters, words, or lines for granular animation control.</p>
+          <code>new SplitText(el, {type:"chars"})</code>
+        </div>
+        <div class="feature-card" style="--card-accent: #34a853">
+          <div class="card-icon">🎯</div>
+          <h3>Magnetic Buttons</h3>
+          <p>Elements that follow the cursor within their bounds, creating a pull effect.</p>
+          <code>addEventListener("mousemove",...)</code>
+        </div>
+        <div class="feature-card" style="--card-accent: #a142f4">
+          <div class="card-icon">🌊</div>
+          <h3>Lenis Smooth Scroll</h3>
+          <p>Butter-smooth native-like scrolling with momentum and friction control.</p>
+          <code>new Lenis({ duration: 1.2 })</code>
+        </div>
+        <div class="feature-card" style="--card-accent: #f538a0">
+          <div class="card-icon">🔮</div>
+          <h3>Glassmorphism</h3>
+          <p>Frosted glass effect with backdrop-filter blur and translucent backgrounds.</p>
+          <code>backdrop-filter: blur(20px)</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 6: Canvas Particle System                       -->
+  <!-- Effect: Interactive particle constellation                -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="particles-section" id="particles">
+    <canvas id="particles-canvas"></canvas>
+    <div class="container particles-content">
+      <div class="section-label light">04 — Canvas Particles</div>
+      <h2 class="section-title light reveal-up">Interactive Particles</h2>
+      <p class="section-desc light reveal-up">
+        Move your cursor to interact with 200+ particles connected by proximity lines. 
+        Canvas API renders at 60fps with distance-based opacity.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 7: Infinite Marquee                             -->
+  <!-- Effect: Continuous text scroll with CSS + GSAP           -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="marquee-section" id="marquee">
+    <div class="section-label" style="padding: 0 5vw;">05 — Infinite Marquee</div>
+    <div class="marquee-track" data-direction="left">
+      <div class="marquee-inner">
+        <span>GSAP ✦ ScrollTrigger ✦ SplitText ✦ Canvas ✦ WebGL ✦ Parallax ✦ Particles ✦ Glassmorphism ✦ </span>
+        <span>GSAP ✦ ScrollTrigger ✦ SplitText ✦ Canvas ✦ WebGL ✦ Parallax ✦ Particles ✦ Glassmorphism ✦ </span>
+      </div>
+    </div>
+    <div class="marquee-track marquee-outlined" data-direction="right">
+      <div class="marquee-inner">
+        <span>Magnetic Buttons ✦ Lenis ✦ Morphing ✦ Counter ✦ Typewriter ✦ Scramble ✦ Hover Effects ✦ </span>
+        <span>Magnetic Buttons ✦ Lenis ✦ Morphing ✦ Counter ✦ Typewriter ✦ Scramble ✦ Hover Effects ✦ </span>
+      </div>
+    </div>
+    <div class="marquee-track" data-direction="left" style="opacity:0.4;">
+      <div class="marquee-inner">
+        <span>Micro-interactions ✦ Stagger ✦ Easing ✦ Pinning ✦ Scrubbing ✦ Timeline ✦ Keyframes ✦ </span>
+        <span>Micro-interactions ✦ Stagger ✦ Easing ✦ Pinning ✦ Scrubbing ✦ Timeline ✦ Keyframes ✦ </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 8: SVG Morphing                                 -->
+  <!-- Effect: Smooth shape morphing with CSS/GSAP              -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="morphing-section" id="morphing">
+    <div class="container">
+      <div class="section-label">06 — SVG Morphing</div>
+      <h2 class="section-title reveal-up">Shape Morphing</h2>
+      <p class="section-desc reveal-up">SVG paths that smoothly transition between shapes on scroll.</p>
+      <div class="morph-container">
+        <svg viewBox="0 0 500 500" class="morph-svg" id="morph-svg">
+          <defs>
+            <linearGradient id="morphGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#4285f4"/>
+              <stop offset="50%" style="stop-color:#a142f4"/>
+              <stop offset="100%" style="stop-color:#f538a0"/>
+            </linearGradient>
+          </defs>
+          <path id="morph-path" fill="url(#morphGrad)" d="M250,50 C350,50 450,150 450,250 C450,350 350,450 250,450 C150,450 50,350 50,250 C50,150 150,50 250,50Z"/>
+        </svg>
+        <div class="morph-label" id="morph-label">Circle</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 9: Counter Animation                            -->
+  <!-- Effect: Number counting up on scroll trigger             -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="counter-section" id="counter">
+    <div class="container">
+      <div class="section-label">07 — Counter Animation</div>
+      <h2 class="section-title reveal-up">Stats That Count Up</h2>
+      <div class="counter-grid">
+        <div class="counter-card reveal-up">
+          <span class="counter-number count-up" data-target="12847">0</span>
+          <span class="counter-label">Lines of Animation Code</span>
+        </div>
+        <div class="counter-card reveal-up">
+          <span class="counter-number count-up" data-target="60">0</span>
+          <span class="counter-suffix">fps</span>
+          <span class="counter-label">Smooth Performance</span>
+        </div>
+        <div class="counter-card reveal-up">
+          <span class="counter-number count-up" data-target="15">0</span>
+          <span class="counter-suffix">+</span>
+          <span class="counter-label">Animation Techniques</span>
+        </div>
+        <div class="counter-card reveal-up">
+          <span class="counter-number count-up" data-target="100">0</span>
+          <span class="counter-suffix">%</span>
+          <span class="counter-label">GPU Accelerated</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 10: Staggered Grid Reveal                       -->
+  <!-- Effect: Grid items reveal with stagger                   -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="grid-section" id="grid">
+    <div class="container">
+      <div class="section-label">08 — Stagger Grid</div>
+      <h2 class="section-title reveal-up">Staggered Grid Reveal</h2>
+      <div class="stagger-grid" id="stagger-grid">
+        <div class="grid-item" style="--accent:#4285f4"><div class="grid-item-inner"><span>01</span></div></div>
+        <div class="grid-item" style="--accent:#ea4335"><div class="grid-item-inner"><span>02</span></div></div>
+        <div class="grid-item" style="--accent:#fbbc04"><div class="grid-item-inner"><span>03</span></div></div>
+        <div class="grid-item" style="--accent:#34a853"><div class="grid-item-inner"><span>04</span></div></div>
+        <div class="grid-item" style="--accent:#a142f4"><div class="grid-item-inner"><span>05</span></div></div>
+        <div class="grid-item" style="--accent:#f538a0"><div class="grid-item-inner"><span>06</span></div></div>
+        <div class="grid-item" style="--accent:#00bcd4"><div class="grid-item-inner"><span>07</span></div></div>
+        <div class="grid-item" style="--accent:#ff9800"><div class="grid-item-inner"><span>08</span></div></div>
+        <div class="grid-item" style="--accent:#4285f4"><div class="grid-item-inner"><span>09</span></div></div>
+        <div class="grid-item" style="--accent:#ea4335"><div class="grid-item-inner"><span>10</span></div></div>
+        <div class="grid-item" style="--accent:#34a853"><div class="grid-item-inner"><span>11</span></div></div>
+        <div class="grid-item" style="--accent:#a142f4"><div class="grid-item-inner"><span>12</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SECTION 11: CTA with Gradient Animation                 -->
+  <!-- Effect: Animated gradient background + reveal            -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section class="cta-section" id="cta">
+    <div class="cta-gradient-bg"></div>
+    <div class="container cta-content">
+      <h2 class="cta-title reveal-up">Ready to Ship<br><span class="gradient-text">Amazing Animations?</span></h2>
+      <p class="cta-desc reveal-up">Every effect on this page is documented with the exact code and library needed to reproduce it.</p>
+      <a href="#docs" class="btn btn-primary btn-lg magnetic-btn reveal-up" data-magnetic>
+        <span>Read the Documentation</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- FOOTER                                                  -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <footer class="footer" id="docs">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Libraries Used</h4>
+          <ul>
+            <li><a href="https://gsap.com" target="_blank">GSAP 3.14.2</a></li>
+            <li><a href="https://gsap.com/docs/v3/Plugins/ScrollTrigger/" target="_blank">ScrollTrigger</a></li>
+            <li><a href="https://gsap.com/docs/v3/Plugins/SplitText/" target="_blank">SplitText</a></li>
+            <li><a href="https://lenis.darkroom.engineering/" target="_blank">Lenis Smooth Scroll</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Techniques</h4>
+          <ul>
+            <li>Canvas Particle System</li>
+            <li>Multi-layer Parallax</li>
+            <li>SVG Path Morphing</li>
+            <li>Custom Cursor</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>CSS Effects</h4>
+          <ul>
+            <li>Glassmorphism (backdrop-filter)</li>
+            <li>Animated Gradients</li>
+            <li>Magnetic Hover</li>
+            <li>Infinite Marquee</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Micro-interactions</h4>
+          <ul>
+            <li>Typewriter Effect</li>
+            <li>Text Scramble</li>
+            <li>Counter Animation</li>
+            <li>Stagger Grid Reveal</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Animation Showcase — Built as a pipeline test for MCP Brain Phase 4</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- SCRIPTS                                                 -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.3.19/dist/lenis.min.js"></script>
+
+  <!-- GSAP Core + Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/SplitText.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>

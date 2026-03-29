@@ -1,0 +1,135 @@
+[
+    {
+        "layout_type": "Common UI Sections",
+        "structure": [
+            "Header/Top Navigation (with user profile, search, notifications, back button)",
+            "Account Balance/Financial Summary Display",
+            "Quick Action Buttons Grid (e.g., Send, Add Funds, Withdraw)",
+            "Transaction History/List",
+            "Bottom Navigation Bar",
+            "Data Visualization (e.g., Bar Charts, Sparkline Graphs)",
+            "Category/Asset Lists (e.g., Shopping, Food & Dining, Top Coins)"
+        ]
+    },
+    {
+        "layout_type": "Mobile Dashboard Layout",
+        "structure": [
+            "Top Navigation Bar",
+            "Account Balance Overview",
+            "Quick Action Button Grid",
+            "Latest Transactions List",
+            "Financial Statistics/Charts Section",
+            "Spending Categories Breakdown",
+            "Cryptocurrency Portfolio/Top Coins Cards",
+            "Bottom Navigation Bar"
+        ]
+    },
+    {
+        "layout_type": "Application Screen Layout",
+        "structure": [
+            "Top Navigation (Profile, Search, Notifications)",
+            "Financial Balance Overview",
+            "Quick Action Buttons Grid",
+            "Transaction/Activity List",
+            "Statistics and Charts Section",
+            "Expense Categories / Asset Listings",
+            "Bottom Navigation Bar"
+        ]
+    },
+    {
+        "layout_type": "Mobile App Dashboard Layout",
+        "structure": [
+            "Top Header/Navigation Bar",
+            "Financial Balance Display Section",
+            "Quick Action Button Grid",
+            "Transaction/Category Listing Sections",
+            "Bottom Navigation Bar",
+            "Data Visualization (Charts) Section",
+            "Horizontal Scrollable Card Carousels"
+        ]
+    },
+    {
+        "layout_type": "Financial Dashboard",
+        "structure": [
+            "Header_with_profile_and_navigation",
+            "Account_Balance_Summary",
+            "Quick_Action_Buttons_Grid",
+            "Crypto_Coin_Overview_Cards",
+            "Statistical_Charts_and_Data",
+            "Spending_Category_Breakdown",
+            "Transaction_History_List",
+            "Bottom_Navigation_Bar"
+        ]
+    },
+    {
+        "layout_type": "Dashboard Layout",
+        "structure": [
+            "hero_display_poster",
+            "sidebar_navigation",
+            "header_bar",
+            "data_overview_cards",
+            "sales_and_metrics_visualization",
+            "list_and_details_panels",
+            "promotional_action_cards"
+        ]
+    },
+    {
+        "layout_type": "Header-Sidebar-Content Split Layout",
+        "structure": [
+            "Global Header",
+            "Left Vertical Navigation Bar",
+            "Pin Detail View (Main Content)",
+            "Related Pins Grid (Masonry Layout)"
+        ]
+    },
+    {
+        "layout_type": "Pin Detail Page Layout",
+        "structure": [
+            "Top Navigation Bar",
+            "Left Vertical Navigation Bar",
+            "Main Pin Closeup View",
+            "Pin Details & Interactions",
+            "Comments Section",
+            "Related Pins Grid"
+        ]
+    },
+    {
+        "layout_type": "webpage",
+        "structure": [
+            "Hero Section",
+            "Product Video",
+            "Agent-First Feature Section",
+            "Feature Explorer",
+            "Use Cases Carousel",
+            "Solutions/Offerings (Pricing)",
+            "Latest Blogs Carousel",
+            "Download Call-to-Action",
+            "Global Footer"
+        ]
+    },
+    {
+        "layout_type": "Linear webpage layout",
+        "structure": [
+            "Header/Navigation",
+            "Hero Section (Welcome/CTA)",
+            "Particle Background",
+            "Video Showcase",
+            "Agent-First Introduction",
+            "Features Overview",
+            "Use Cases",
+            "Solutions/Pricing (Download options)",
+            "Latest Blog Posts",
+            "Final Download Call-to-action",
+            "Footer Navigation"
+        ]
+    },
+    {
+        "layout_type": "Multi-Region Page Layout",
+        "structure": [
+            "Global Header",
+            "Left Sidebar Navigation",
+            "Pin Detail Card Container",
+            "Related Pins Grid"
+        ]
+    }
+]

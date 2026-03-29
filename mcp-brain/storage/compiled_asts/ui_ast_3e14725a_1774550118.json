@@ -1,0 +1,777 @@
+{
+  "version": "1.0",
+  "meta": {
+    "template_id": "3e14725a-7682-43b0-b70a-26261cc423f0",
+    "created_at": "2026-03-26T18:35:18Z",
+    "source": "market_intelligence",
+    "design_system": "dark_glass_dashboard",
+    "variation_seed": 8281,
+    "product_type": "SaaS Landing Page",
+    "target_market": "tech startups",
+    "complexity_tier": "rich"
+  },
+  "layout_tree": {
+    "id": "root",
+    "type": "page",
+    "layout": "vertical",
+    "children": [
+      {
+        "id": "navbar",
+        "type": "section",
+        "role": "navbar",
+        "layout": "full-width",
+        "props": {
+          "sticky": true,
+          "height": "72px"
+        },
+        "children": [
+          {
+            "id": "logo",
+            "type": "element"
+          },
+          {
+            "id": "nav_links",
+            "type": "element"
+          },
+          {
+            "id": "cta_button",
+            "type": "element"
+          }
+        ]
+      },
+      {
+        "id": "hero",
+        "type": "section",
+        "role": "hero",
+        "layout": "centered",
+        "props": {
+          "min_height": "80vh",
+          "layout": "two_column"
+        },
+        "children": [
+          {
+            "id": "hero_left",
+            "type": "container",
+            "children": [
+              {
+                "id": "badge",
+                "type": "element"
+              },
+              {
+                "id": "heading",
+                "type": "element"
+              },
+              {
+                "id": "subtext",
+                "type": "element"
+              },
+              {
+                "id": "cta_group",
+                "type": "element"
+              }
+            ]
+          },
+          {
+            "id": "hero_right",
+            "type": "container",
+            "children": [
+              {
+                "id": "image_mockup",
+                "type": "element"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "features",
+        "type": "section",
+        "role": "features",
+        "layout": "grid",
+        "props": {
+          "grid_cols": 3,
+          "layout": "grid"
+        },
+        "children": [
+          {
+            "id": "features_heading",
+            "type": "element"
+          },
+          {
+            "id": "features_subtext",
+            "type": "element"
+          },
+          {
+            "id": "feature_items",
+            "type": "element"
+          }
+        ]
+      },
+      {
+        "id": "video",
+        "type": "section",
+        "role": "video",
+        "layout": "full-width"
+      },
+      {
+        "id": "about",
+        "type": "section",
+        "role": "about",
+        "layout": "full-width"
+      },
+      {
+        "id": "use_cases",
+        "type": "section",
+        "role": "use_cases",
+        "layout": "full-width"
+      },
+      {
+        "id": "footer",
+        "type": "section",
+        "role": "footer",
+        "layout": "full-width",
+        "props": {
+          "grid_cols": 4
+        },
+        "children": [
+          {
+            "id": "footer_links",
+            "type": "element"
+          },
+          {
+            "id": "copyright",
+            "type": "element"
+          }
+        ]
+      }
+    ]
+  },
+  "design_tokens": {
+    "theme": "dark",
+    "color_palette": {
+      "primary": "#7C3AED",
+      "secondary": "#06B6D4",
+      "background": "#0F172A",
+      "surface": "rgba(255,255,255,0.05)",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#94A3B8",
+      "accent_gradient_start": "#7C3AED",
+      "accent_gradient_end": "#06B6D4"
+    },
+    "typography": {
+      "font_family": {
+        "family": "Google Sans Flex",
+        "weight": "400 500",
+        "style": "oblique 0deg 10deg",
+        "stretch": "25% 150%",
+        "status": "unloaded",
+        "source": "document.fonts"
+      },
+      "heading_scale": [
+        "48px",
+        "36px",
+        "28px",
+        "22px"
+      ],
+      "body_size": "16px",
+      "font_weight_heading": "800",
+      "font_weight_body": "400",
+      "line_height": "1.6",
+      "letter_spacing_heading": "-0.02em"
+    },
+    "spacing": {
+      "section_padding": "100px",
+      "container_width": "1200px",
+      "gap": "32px",
+      "content_padding": "24px"
+    },
+    "border_radius": "16px",
+    "shadow": "0 0 40px #7C3AED33",
+    "animation": {
+      "type": "fade-up",
+      "duration": "0.6s",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "stagger_delay": "0.1s"
+    }
+  },
+  "components": {
+    "navbar": {
+      "id": "navbar",
+      "tag": "nav",
+      "component_name": "Navbar",
+      "classes": "fixed top-0 w-full z-50 backdrop-blur-md",
+      "props": {
+        "sticky": true,
+        "height": "72px",
+        "use_micro_interactions": true
+      },
+      "children": [
+        {
+          "id": "logo",
+          "tag": "div",
+          "component_name": "Logo"
+        },
+        {
+          "id": "nav_links",
+          "tag": "ul",
+          "component_name": "NavLinks",
+          "props": {
+            "min_items": 3,
+            "max_items": 7
+          }
+        },
+        {
+          "id": "cta_button",
+          "tag": "button",
+          "component_name": "NavCTA",
+          "props": {
+            "variant": "primary",
+            "size": "sm"
+          }
+        }
+      ]
+    },
+    "hero": {
+      "id": "hero",
+      "tag": "section",
+      "component_name": "HeroSection",
+      "classes": "relative overflow-hidden",
+      "props": {
+        "min_height": "80vh",
+        "layout": "two_column",
+        "use_micro_interactions": true
+      },
+      "children": [
+        {
+          "id": "hero_left",
+          "tag": "div",
+          "component_name": "HeroContent",
+          "children": [
+            {
+              "id": "badge",
+              "tag": "span",
+              "component_name": "HeroBadge"
+            },
+            {
+              "id": "heading",
+              "tag": "h1",
+              "component_name": "HeroHeading",
+              "props": {
+                "max_length": 60
+              }
+            },
+            {
+              "id": "subtext",
+              "tag": "p",
+              "component_name": "HeroSubtext",
+              "props": {
+                "max_length": 140
+              }
+            },
+            {
+              "id": "cta_group",
+              "tag": "div",
+              "component_name": "HeroCTAGroup",
+              "props": {
+                "max_buttons": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "hero_right",
+          "tag": "div",
+          "component_name": "HeroVisual",
+          "children": [
+            {
+              "id": "image_mockup",
+              "tag": "div",
+              "component_name": "HeroImage"
+            }
+          ]
+        }
+      ]
+    },
+    "features": {
+      "id": "features",
+      "tag": "section",
+      "component_name": "FeaturesSection",
+      "classes": "relative",
+      "props": {
+        "grid_cols": 3,
+        "layout": "grid",
+        "style": "cards",
+        "use_micro_interactions": true
+      },
+      "children": [
+        {
+          "id": "features_heading",
+          "tag": "h2",
+          "component_name": "FeaturesHeading"
+        },
+        {
+          "id": "features_subtext",
+          "tag": "p",
+          "component_name": "FeaturesSubtext"
+        },
+        {
+          "id": "feature_items",
+          "tag": "div",
+          "component_name": "FeatureGrid",
+          "props": {
+            "min_count": 3,
+            "max_count": 6
+          }
+        }
+      ]
+    },
+    "video": {
+      "id": "video",
+      "tag": "section",
+      "component_name": "VideoSection",
+      "classes": "relative",
+      "props": {
+        "use_micro_interactions": true
+      },
+      "children": []
+    },
+    "about": {
+      "id": "about",
+      "tag": "section",
+      "component_name": "AboutSection",
+      "classes": "relative",
+      "props": {
+        "use_micro_interactions": true
+      },
+      "children": []
+    },
+    "use_cases": {
+      "id": "use_cases",
+      "tag": "section",
+      "component_name": "UseCasesSection",
+      "classes": "relative",
+      "props": {
+        "use_micro_interactions": true
+      },
+      "children": []
+    },
+    "footer": {
+      "id": "footer",
+      "tag": "footer",
+      "component_name": "Footer",
+      "classes": "border-t",
+      "props": {
+        "grid_cols": 4,
+        "use_micro_interactions": true
+      },
+      "children": [
+        {
+          "id": "footer_links",
+          "tag": "div",
+          "component_name": "FooterLinks"
+        },
+        {
+          "id": "copyright",
+          "tag": "div",
+          "component_name": "Copyright"
+        }
+      ]
+    }
+  },
+  "content_slots": {
+    "navbar.heading": {
+      "slot_id": "navbar.heading",
+      "type": "text",
+      "max_length": 60,
+      "tone": "professional",
+      "target": "tech startups"
+    },
+    "navbar.subtext": {
+      "slot_id": "navbar.subtext",
+      "type": "text",
+      "max_length": 140,
+      "tone": "professional",
+      "target": "tech startups"
+    },
+    "hero.heading": {
+      "slot_id": "hero.heading",
+      "type": "text",
+      "value": "Experience liftoff with the next-generation IDE",
+      "max_length": 60,
+      "tone": "bold",
+      "target": "tech startups"
+    },
+    "hero.subtext": {
+      "slot_id": "hero.subtext",
+      "type": "text",
+      "max_length": 140,
+      "tone": "bold",
+      "target": "tech startups"
+    },
+    "hero.cta.primary": {
+      "slot_id": "hero.cta.primary",
+      "type": "button_text",
+      "value": "Download for Windows",
+      "max_length": 25,
+      "style": "conversion-focused"
+    },
+    "hero.cta.secondary": {
+      "slot_id": "hero.cta.secondary",
+      "type": "button_text",
+      "value": "Explore use cases",
+      "max_length": 25,
+      "style": "informational"
+    },
+    "features.heading": {
+      "slot_id": "features.heading",
+      "type": "text",
+      "value": "TurboQuant: Redefining AI efficiency with extreme compression",
+      "max_length": 60,
+      "tone": "technical",
+      "target": "tech startups"
+    },
+    "features.subtext": {
+      "slot_id": "features.subtext",
+      "type": "text",
+      "value": "Google Antigravity's Editor view offers tab autocompletion, natural language code commands, and a configurable, and context-aware configurable agent.",
+      "max_length": 140,
+      "tone": "technical",
+      "target": "tech startups"
+    },
+    "features.items": {
+      "slot_id": "features.items",
+      "type": "list",
+      "item_structure": {
+        "title": "text",
+        "description": "text",
+        "icon": "emoji"
+      },
+      "count": 3
+    },
+    "video.heading": {
+      "slot_id": "video.heading",
+      "type": "text",
+      "value": "TurboQuant: Redefining AI efficiency with extreme compression",
+      "max_length": 60,
+      "tone": "professional",
+      "target": "tech startups"
+    },
+    "video.subtext": {
+      "slot_id": "video.subtext",
+      "type": "text",
+      "max_length": 140,
+      "tone": "professional",
+      "target": "tech startups"
+    },
+    "about.heading": {
+      "slot_id": "about.heading",
+      "type": "text",
+      "value": "TurboQuant: Redefining AI efficiency with extreme compression",
+      "max_length": 60,
+      "tone": "professional",
+      "target": "tech startups"
+    },
+    "about.subtext": {
+      "slot_id": "about.subtext",
+      "type": "text",
+      "max_length": 140,
+      "tone": "professional",
+      "target": "tech startups"
+    },
+    "use_cases.heading": {
+      "slot_id": "use_cases.heading",
+      "type": "text",
+      "value": "Built for developersfor the agent-first era",
+      "max_length": 60,
+      "tone": "professional",
+      "target": "tech startups"
+    },
+    "use_cases.subtext": {
+      "slot_id": "use_cases.subtext",
+      "type": "text",
+      "value": "Google Antigravity is built for user trust, whether you're a professional developer working in a large enterprise codebase, a hobbyist vibe-coding in their spare time, or anyone in between.",
+      "max_length": 140,
+      "tone": "professional",
+      "target": "tech startups"
+    },
+    "footer.heading": {
+      "slot_id": "footer.heading",
+      "type": "text",
+      "value": "TurboQuant: Redefining AI efficiency with extreme compression",
+      "max_length": 60,
+      "tone": "neutral",
+      "target": "tech startups"
+    },
+    "footer.subtext": {
+      "slot_id": "footer.subtext",
+      "type": "text",
+      "max_length": 140,
+      "tone": "neutral",
+      "target": "tech startups"
+    }
+  },
+  "spatial_rules": {
+    "hero": {
+      "section_id": "hero",
+      "height": "auto",
+      "alignment": "left",
+      "padding_top": "0px",
+      "padding_bottom": "40px",
+      "width_ratio": 0.0,
+      "z_index": 20,
+      "position": "relative"
+    },
+    "video": {
+      "section_id": "video",
+      "height": "auto",
+      "alignment": "left",
+      "padding_top": "0px",
+      "padding_bottom": "40px",
+      "width_ratio": 0.0,
+      "z_index": 5,
+      "position": "relative"
+    },
+    "about": {
+      "section_id": "about",
+      "height": "auto",
+      "alignment": "left",
+      "padding_top": "0px",
+      "padding_bottom": "40px",
+      "width_ratio": 0.0,
+      "z_index": 5,
+      "position": "relative"
+    },
+    "features": {
+      "section_id": "features",
+      "height": "auto",
+      "alignment": "left",
+      "padding_top": "0px",
+      "padding_bottom": "40px",
+      "width_ratio": 0.0,
+      "z_index": 5,
+      "position": "relative"
+    },
+    "use_cases": {
+      "section_id": "use_cases",
+      "height": "auto",
+      "alignment": "left",
+      "padding_top": "0px",
+      "padding_bottom": "40px",
+      "width_ratio": 0.0,
+      "z_index": 5,
+      "position": "relative"
+    },
+    "pricing": {
+      "section_id": "pricing",
+      "height": "auto",
+      "alignment": "left",
+      "padding_top": "0px",
+      "padding_bottom": "40px",
+      "width_ratio": 0.0,
+      "z_index": 5,
+      "position": "relative"
+    },
+    "section_wrapper": {
+      "section_id": "section_wrapper",
+      "height": "auto",
+      "alignment": "left",
+      "padding_top": "0px",
+      "padding_bottom": "40px",
+      "width_ratio": 0.0,
+      "z_index": 5,
+      "position": "relative"
+    },
+    "blog": {
+      "section_id": "blog",
+      "height": "auto",
+      "alignment": "left",
+      "padding_top": "0px",
+      "padding_bottom": "40px",
+      "width_ratio": 0.0,
+      "z_index": 5,
+      "position": "relative"
+    },
+    "cta": {
+      "section_id": "cta",
+      "height": "auto",
+      "alignment": "left",
+      "padding_top": "0px",
+      "padding_bottom": "40px",
+      "width_ratio": 0.0,
+      "z_index": 5,
+      "position": "relative"
+    },
+    "footer": {
+      "section_id": "footer",
+      "height": "auto",
+      "alignment": "left",
+      "padding_top": "0px",
+      "padding_bottom": "40px",
+      "width_ratio": 0.0,
+      "z_index": 5,
+      "position": "relative"
+    }
+  },
+  "constraints": {
+    "required_sections": [
+      "navbar",
+      "hero",
+      "footer"
+    ],
+    "order": [
+      "navbar",
+      "hero",
+      "features",
+      "video",
+      "about",
+      "use_cases",
+      "footer"
+    ],
+    "rules": [
+      "hero must contain heading and cta",
+      "cta must be visible above fold",
+      "no empty containers",
+      "max 2 primary CTAs per section",
+      "navbar must exist at top",
+      "footer must exist at bottom"
+    ]
+  },
+  "variation": {
+    "variation_seed": 8281,
+    "layout_variant": "centered",
+    "cta_style": "single",
+    "hero_alignment": "center",
+    "feature_style": "cards",
+    "pricing_style": "comparison",
+    "testimonial_style": "carousel",
+    "animation_intensity": "subtle",
+    "color_mode": "neon"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "type": "deep_analysis",
+        "url": "https://antigravity.google/"
+      }
+    ],
+    "screenshots": [
+      {
+        "section": "hero",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "w": 1920,
+          "h": 1080
+        },
+        "bbox_used": true
+      },
+      {
+        "section": "video",
+        "bbox": {
+          "x": 480,
+          "y": 1296.5,
+          "w": 960,
+          "h": 433
+        },
+        "bbox_used": true
+      },
+      {
+        "section": "about",
+        "bbox": {
+          "x": 0,
+          "y": 1946,
+          "w": 1920,
+          "h": 670.3125
+        },
+        "bbox_used": true
+      },
+      {
+        "section": "features",
+        "bbox": {
+          "x": 0,
+          "y": 2616.3125,
+          "w": 1920,
+          "h": 2256
+        },
+        "bbox_used": true
+      },
+      {
+        "section": "use_cases",
+        "bbox": {
+          "x": 0,
+          "y": 4872.3125,
+          "w": 1920,
+          "h": 1242.265625
+        },
+        "bbox_used": true
+      },
+      {
+        "section": "pricing",
+        "bbox": {
+          "x": 0,
+          "y": 6114.578125,
+          "w": 1920,
+          "h": 839.21875
+        },
+        "bbox_used": true
+      },
+      {
+        "section": "section_wrapper",
+        "bbox": {
+          "x": 160,
+          "y": 6170.578125,
+          "w": 1600,
+          "h": 728.21875
+        },
+        "bbox_used": true
+      },
+      {
+        "section": "blog",
+        "bbox": {
+          "x": 0,
+          "y": 6953.796875,
+          "w": 1920,
+          "h": 789.859375
+        },
+        "bbox_used": true
+      },
+      {
+        "section": "cta",
+        "bbox": {
+          "x": 144,
+          "y": 7931.74462890625,
+          "w": 1632,
+          "h": 771.66748046875
+        },
+        "bbox_used": true
+      },
+      {
+        "section": "footer",
+        "bbox": {
+          "x": 991.984375,
+          "y": 8863.5,
+          "w": 288,
+          "h": 174.09375
+        },
+        "bbox_used": true
+      }
+    ],
+    "dominant_pattern": "glass_dashboard",
+    "discarded_patterns": [
+      "ai_saas_dark",
+      "clean_modern",
+      "enterprise_saas"
+    ],
+    "demand_score": 0.5,
+    "trend_velocity": 0.0
+  },
+  "compiler_flags": {
+    "strict_mode": true,
+    "allow_llm_layout_changes": false,
+    "regenerate_on_failure": true,
+    "enforce_spatial_rules": true,
+    "demand_driven_complexity": true,
+    "max_sections": 6,
+    "min_sections": 3
+  }
+}

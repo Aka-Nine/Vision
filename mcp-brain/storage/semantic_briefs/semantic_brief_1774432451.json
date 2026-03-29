@@ -1,0 +1,834 @@
+{
+  "sections": [
+    {
+      "type": "hero",
+      "intent": "primary_value_proposition",
+      "content": {
+        "heading": "Experience liftoff with the next-generation IDE",
+        "subtext": null,
+        "cta": "Download for Windows",
+        "cta_secondary": "Explore use cases",
+        "cta_texts": [
+          "Download for Windows",
+          "Explore use cases"
+        ]
+      },
+      "meta": {
+        "confidence": 0.883,
+        "source": "deep_analysis",
+        "heading_score": 0.97,
+        "description_score": 0,
+        "cta_count": 2,
+        "source_count": 2
+      },
+      "_bounding_box": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "_scroll_y": 0,
+      "_classes": [
+        "welcome-wrapper"
+      ]
+    },
+    {
+      "type": "video",
+      "intent": "product_showcase",
+      "content": {
+        "heading": "antigravity.google",
+        "subtext": null,
+        "cta": "close",
+        "cta_secondary": null,
+        "cta_texts": [
+          "close"
+        ]
+      },
+      "meta": {
+        "confidence": 0.552,
+        "source": "trend_analysis",
+        "heading_score": 0.51,
+        "description_score": 0,
+        "cta_count": 1,
+        "source_count": 2
+      },
+      "_bounding_box": {
+        "x": 480,
+        "y": 1296.5,
+        "w": 960,
+        "h": 433
+      },
+      "_scroll_y": 1296.5,
+      "_classes": [
+        "landing-video-section"
+      ]
+    },
+    {
+      "type": "about",
+      "intent": "brand_story",
+      "content": {
+        "heading": "antigravity.google",
+        "subtext": null,
+        "cta": null,
+        "cta_secondary": null,
+        "cta_texts": []
+      },
+      "meta": {
+        "confidence": 0.51,
+        "source": "trend_analysis",
+        "heading_score": 0.51,
+        "description_score": 0,
+        "cta_count": 0,
+        "source_count": 1
+      },
+      "_bounding_box": {
+        "x": 0,
+        "y": 1946,
+        "w": 1920,
+        "h": 670.3125
+      },
+      "_scroll_y": 1946,
+      "_classes": [
+        "agent-first-section"
+      ]
+    },
+    {
+      "type": "features",
+      "intent": "capability_highlight",
+      "content": {
+        "heading": "antigravity.google",
+        "subtext": "Google Antigravity's Editor view offers tab autocompletion, natural language code commands, and a configurable, and context-aware configurable agent.",
+        "cta": "Explore Product",
+        "cta_secondary": null,
+        "cta_texts": [
+          "Explore Product"
+        ]
+      },
+      "meta": {
+        "confidence": 0.702,
+        "source": "deep_analysis",
+        "heading_score": 0.51,
+        "description_score": 0.802,
+        "cta_count": 1,
+        "source_count": 2
+      },
+      "_bounding_box": {
+        "x": 0,
+        "y": 2616.3125,
+        "w": 1920,
+        "h": 2256
+      },
+      "_scroll_y": 2616.3125,
+      "_classes": [
+        "feature-explorer-section"
+      ]
+    },
+    {
+      "type": "use_cases",
+      "intent": "social_validation",
+      "content": {
+        "heading": "Built for developersfor the agent-first era",
+        "subtext": "Google Antigravity is built for user trust, whether you're a professional developer working in a large enterprise codebase, a hobbyist vibe-coding in their spare time, or anyone in between.",
+        "cta": "View case",
+        "cta_secondary": "View case",
+        "cta_texts": [
+          "View case",
+          "View case",
+          "View case"
+        ]
+      },
+      "meta": {
+        "confidence": 0.817,
+        "source": "deep_analysis",
+        "heading_score": 0.853,
+        "description_score": 0.802,
+        "cta_count": 3,
+        "source_count": 2
+      },
+      "_bounding_box": {
+        "x": 0,
+        "y": 4872.3125,
+        "w": 1920,
+        "h": 1242.265625
+      },
+      "_scroll_y": 4872.3125,
+      "_classes": [
+        "landing-use-case-section"
+      ]
+    },
+    {
+      "type": "pricing",
+      "intent": "conversion",
+      "content": {
+        "heading": "antigravity.google",
+        "subtext": "Available at no charge",
+        "cta": "Download",
+        "cta_secondary": "Notify me",
+        "cta_texts": [
+          "Download",
+          "Notify me"
+        ]
+      },
+      "meta": {
+        "confidence": 0.68,
+        "source": "deep_analysis",
+        "heading_score": 0.51,
+        "description_score": 0.698,
+        "cta_count": 2,
+        "source_count": 2
+      },
+      "_bounding_box": {
+        "x": 0,
+        "y": 6114.578125,
+        "w": 1920,
+        "h": 839.21875
+      },
+      "_scroll_y": 6114.578125,
+      "_classes": [
+        "try-solutions-section"
+      ]
+    },
+    {
+      "type": "section_wrapper",
+      "intent": "general_content",
+      "content": {
+        "heading": "antigravity.google",
+        "subtext": "Available at no charge",
+        "cta": "Notify me",
+        "cta_secondary": "Download",
+        "cta_texts": [
+          "Notify me",
+          "Download"
+        ]
+      },
+      "meta": {
+        "confidence": 0.688,
+        "source": "deep_analysis",
+        "heading_score": 0.56,
+        "description_score": 0.66,
+        "cta_count": 2,
+        "source_count": 2
+      },
+      "_bounding_box": {
+        "x": 160,
+        "y": 6170.578125,
+        "w": 1600,
+        "h": 728.21875
+      },
+      "_scroll_y": 6170.578125,
+      "_classes": [
+        "section-wrapper"
+      ]
+    },
+    {
+      "type": "blog",
+      "intent": "content_marketing",
+      "content": {
+        "heading": "antigravity.google",
+        "subtext": "Gemini 3.1 Pro in Google Antigravity",
+        "cta": "View blog",
+        "cta_secondary": "Introducing Google AntigravityNov 18, 2025ProductRead blog",
+        "cta_texts": [
+          "View blog",
+          "Introducing Google AntigravityNov 18, 2025ProductRead blog"
+        ]
+      },
+      "meta": {
+        "confidence": 0.688,
+        "source": "deep_analysis",
+        "heading_score": 0.51,
+        "description_score": 0.67,
+        "cta_count": 2,
+        "source_count": 2
+      },
+      "_bounding_box": {
+        "x": 0,
+        "y": 6953.796875,
+        "w": 1920,
+        "h": 789.859375
+      },
+      "_scroll_y": 6953.796875,
+      "_classes": [
+        "landing-latest-blogs"
+      ]
+    },
+    {
+      "type": "cta",
+      "intent": "conversion",
+      "content": {
+        "heading": "antigravity.google",
+        "subtext": null,
+        "cta": "Download for x64",
+        "cta_secondary": "Download for ARM64",
+        "cta_texts": [
+          "Download for x64",
+          "Download for ARM64"
+        ]
+      },
+      "meta": {
+        "confidence": 0.697,
+        "source": "trend_analysis",
+        "heading_score": 0.51,
+        "description_score": 0,
+        "cta_count": 2,
+        "source_count": 2
+      },
+      "_bounding_box": {
+        "x": 144,
+        "y": 7931.74462890625,
+        "w": 1632,
+        "h": 771.66748046875
+      },
+      "_scroll_y": 7931.74462890625,
+      "_classes": [
+        "download-section-container"
+      ]
+    },
+    {
+      "type": "footer",
+      "intent": "navigation",
+      "content": {
+        "heading": "antigravity.google",
+        "subtext": null,
+        "cta": "Download",
+        "cta_secondary": "Product",
+        "cta_texts": [
+          "Download",
+          "Product",
+          "Docs"
+        ]
+      },
+      "meta": {
+        "confidence": 0.677,
+        "source": "trend_analysis",
+        "heading_score": 0.56,
+        "description_score": 0,
+        "cta_count": 3,
+        "source_count": 2
+      },
+      "_bounding_box": {
+        "x": 991.984375,
+        "y": 8863.5,
+        "w": 288,
+        "h": 174.09375
+      },
+      "_scroll_y": 8863.5,
+      "_classes": [
+        "footer-nav-section"
+      ]
+    }
+  ],
+  "source_metadata": {
+    "url": "https://antigravity.google/",
+    "title": "Google Antigravity",
+    "meta_description": "Google Antigravity - Build the new way"
+  },
+  "design_tokens": {
+    "fonts": [
+      {
+        "family": "Google Sans Flex",
+        "weight": "400 500",
+        "style": "oblique 0deg 10deg",
+        "stretch": "25% 150%",
+        "status": "unloaded",
+        "source": "document.fonts"
+      },
+      {
+        "family": "Google Sans Code",
+        "weight": "400",
+        "style": "italic",
+        "stretch": "normal",
+        "status": "unloaded",
+        "source": "document.fonts"
+      },
+      {
+        "family": "Google Sans Code",
+        "weight": "400",
+        "style": "normal",
+        "stretch": "normal",
+        "status": "unloaded",
+        "source": "document.fonts"
+      },
+      {
+        "family": "Google Symbols",
+        "weight": "300",
+        "style": "normal",
+        "stretch": "normal",
+        "status": "loaded",
+        "source": "document.fonts"
+      }
+    ],
+    "colors": [
+      {
+        "hex": "#121317",
+        "rgb": "rgb(18, 19, 23)",
+        "usage": "navigation_text",
+        "element": "header",
+        "count": 5
+      },
+      {
+        "hex": "#121317",
+        "rgb": "rgb(18, 19, 23)",
+        "usage": "navigation_border",
+        "element": "header",
+        "count": 5
+      },
+      {
+        "hex": "#45474d",
+        "rgb": "rgb(69, 71, 77)",
+        "usage": "button_text",
+        "element": "button",
+        "count": 5
+      },
+      {
+        "hex": "#121317",
+        "rgb": "rgb(18, 19, 23)",
+        "usage": "section_text",
+        "element": "section",
+        "count": 5
+      },
+      {
+        "hex": "#121317",
+        "rgb": "rgb(18, 19, 23)",
+        "usage": "link_text",
+        "element": "a",
+        "count": 4
+      },
+      {
+        "hex": "#121317",
+        "rgb": "rgb(18, 19, 23)",
+        "usage": "section_border",
+        "element": "section",
+        "count": 4
+      },
+      {
+        "hex": "#121317",
+        "rgb": "rgb(18, 19, 23)",
+        "usage": "body_text_text",
+        "element": "p",
+        "count": 3
+      },
+      {
+        "hex": "#121317",
+        "rgb": "rgb(18, 19, 23)",
+        "usage": "body_text_border",
+        "element": "p",
+        "count": 3
+      },
+      {
+        "hex": "#121317",
+        "rgb": "rgb(18, 19, 23)",
+        "usage": "link_border",
+        "element": "a",
+        "count": 3
+      },
+      {
+        "hex": "#121317",
+        "rgb": "rgb(18, 19, 23)",
+        "usage": "heading_text",
+        "element": "h1",
+        "count": 2
+      },
+      {
+        "hex": "#121317",
+        "rgb": "rgb(18, 19, 23)",
+        "usage": "heading_border",
+        "element": "h1",
+        "count": 2
+      },
+      {
+        "hex": "#45474d",
+        "rgb": "rgb(69, 71, 77)",
+        "usage": "body_text_text",
+        "element": "p",
+        "count": 2
+      },
+      {
+        "hex": "#45474d",
+        "rgb": "rgb(69, 71, 77)",
+        "usage": "body_text_border",
+        "element": "p",
+        "count": 2
+      },
+      {
+        "hex": "#121317",
+        "rgb": "rgb(18, 19, 23)",
+        "usage": "background_text",
+        "element": "body",
+        "count": 1
+      },
+      {
+        "hex": "#121317",
+        "rgb": "rgb(18, 19, 23)",
+        "usage": "background_border",
+        "element": "body",
+        "count": 1
+      },
+      {
+        "hex": "#45474d",
+        "rgb": "rgb(69, 71, 77)",
+        "usage": "link_text",
+        "element": "a",
+        "count": 1
+      },
+      {
+        "hex": "#45474d",
+        "rgb": "rgb(69, 71, 77)",
+        "usage": "link_border",
+        "element": "a",
+        "count": 1
+      },
+      {
+        "hex": "#b7bfd9",
+        "rgb": "rgba(183, 191, 217, 0.09)",
+        "usage": "link_bg",
+        "element": "a",
+        "count": 1
+      },
+      {
+        "hex": "#ffffff",
+        "rgb": "rgba(255, 255, 255, 0.85)",
+        "usage": "navigation_bg",
+        "element": "header",
+        "count": 1
+      },
+      {
+        "hex": "#121317",
+        "rgb": "rgb(18, 19, 23)",
+        "usage": "footer_text",
+        "element": "footer",
+        "count": 1
+      },
+      {
+        "hex": "#121317",
+        "rgb": "rgb(18, 19, 23)",
+        "usage": "footer_border",
+        "element": "footer",
+        "count": 1
+      },
+      {
+        "hex": "#212226",
+        "rgb": "rgba(33, 34, 38, 0.06) rgb(18, 19, 23) rgb(18, 19, 23)",
+        "usage": "section_border",
+        "element": "section",
+        "count": 1
+      }
+    ],
+    "animations": [
+      {
+        "type": "css_keyframe",
+        "name": "_ngcontent-ng-c2229099137_fade-in-simple",
+        "duration": null,
+        "properties": null,
+        "element_selector": null
+      },
+      {
+        "type": "css_keyframe",
+        "name": "_ngcontent-ng-c2229099137_delayed-fade-in",
+        "duration": null,
+        "properties": null,
+        "element_selector": null
+      },
+      {
+        "type": "css_keyframe",
+        "name": "_ngcontent-ng-c2334403579_blink",
+        "duration": null,
+        "properties": null,
+        "element_selector": null
+      },
+      {
+        "type": "css_transition",
+        "name": null,
+        "duration": "0.3s",
+        "properties": "transform",
+        "element_selector": "header.header"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(-0.112784, 0.99362, -0.99362, -0.112781, 66.2473, -15.5344)",
+        "element_selector": "ellipse"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(0.226238, 0.974072, -0.974072, 0.226238, 108.873, -66.8123)",
+        "element_selector": "ellipse"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(0.273528, 0.961864, -0.961864, 0.273528, 46.6357, 21.5827)",
+        "element_selector": "ellipse"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(0.699582, 0.714552, -0.714552, 0.699582, 34.0193, 4.86723)",
+        "element_selector": "ellipse"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(-0.409539, 0.912293, -0.912294, -0.409537, 101.25, -15.1674)",
+        "element_selector": "ellipse"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(0.828292, 0.560296, -0.560296, 0.828292, 29.235, -47.8036)",
+        "element_selector": "ellipse"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(-0.382941, 0.923773, -0.923773, -0.382941, 59.8253, 19.2155)",
+        "element_selector": "ellipse"
+      },
+      {
+        "type": "css_transition",
+        "name": null,
+        "duration": "0.2s",
+        "properties": "opacity",
+        "element_selector": "a.body"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(1, 0, 0, 1, 0, 0)",
+        "element_selector": "div"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(1, 0, 0, 1, 1060, 107)",
+        "element_selector": "div"
+      },
+      {
+        "type": "css_animation",
+        "name": "_ngcontent-ng-c2334403579_blink",
+        "duration": "0.5s",
+        "properties": null,
+        "element_selector": "img.blinking-cursor"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(0.5, 0, 0, 0.5, 0, 0)",
+        "element_selector": "section"
+      },
+      {
+        "type": "css_transition",
+        "name": null,
+        "duration": "0.2s",
+        "properties": "opacity",
+        "element_selector": "div.dialog-backdrop"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(0, 0, 0, 0, -75, -29.5)",
+        "element_selector": "div"
+      },
+      {
+        "type": "css_transition",
+        "name": null,
+        "duration": "0.3s, 0.3s",
+        "properties": "transform, opacity",
+        "element_selector": "div.video-control-button"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(1, 0, 0, 1, 0, 0)",
+        "element_selector": "video"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(1, 0, 0, 1, 0, 0)",
+        "element_selector": "ul"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(1, 0, 0, 1, 0, -16.8011)",
+        "element_selector": "li"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(1, 0, 0, 1, 0, -5.3621)",
+        "element_selector": "li"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(1, 0, 0, 1, 0, 6.7158)",
+        "element_selector": "li"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(1, 0, 0, 1, 0, 17.9936)",
+        "element_selector": "li"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(1, 0, 0, 1, 0, 27.1279)",
+        "element_selector": "li"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(1, 0, 0, 1, 0, 33.0305)",
+        "element_selector": "li"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(1, 0, 0, 1, 0, 34.9983)",
+        "element_selector": "li"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(1, 0, 0, 1, 0, 32.7969)",
+        "element_selector": "li"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(1, 0, 0, 1, 0, 26.6885)",
+        "element_selector": "li"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(1, 0, 0, 1, 0, 17.4007)",
+        "element_selector": "li"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(1, 0, 0, 1, 0, 6.0401)",
+        "element_selector": "li"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(1, 0, 0, 1, 0, -6.0401)",
+        "element_selector": "li"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(1, 0, 0, 1, 0, -17.4007)",
+        "element_selector": "li"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(1, 0, 0, 1, 0, -26.6885)",
+        "element_selector": "li"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(1, 0, 0, 1, 0, -32.7969)",
+        "element_selector": "li"
+      },
+      {
+        "type": "transform",
+        "name": null,
+        "duration": null,
+        "properties": "matrix(1, 0, 0, 1, 0, -34.9983)",
+        "element_selector": "li"
+      },
+      {
+        "type": "canvas_animation",
+        "name": "canvas",
+        "duration": "continuous",
+        "properties": "1920x1080",
+        "element_selector": "canvas"
+      },
+      {
+        "type": "canvas_animation",
+        "name": "canvas",
+        "duration": "continuous",
+        "properties": "800x728",
+        "element_selector": "canvas"
+      },
+      {
+        "type": "canvas_animation",
+        "name": "canvas",
+        "duration": "continuous",
+        "properties": "800x728",
+        "element_selector": "canvas"
+      },
+      {
+        "type": "canvas_animation",
+        "name": "canvas",
+        "duration": "continuous",
+        "properties": "1732x852",
+        "element_selector": "canvas"
+      }
+    ]
+  },
+  "market_context": {
+    "trends": [
+      {
+        "trend": "UI for: antigravity.google",
+        "popularity_score": 0.88,
+        "source": "hacker_news_free_api"
+      }
+    ],
+    "product_type": "AI SaaS template Template",
+    "target_market": "AI startups",
+    "demand_score": 0.91,
+    "style": "modern dark gradient"
+  },
+  "_stats": {
+    "total_sections": 10,
+    "avg_confidence": 0.689,
+    "sections_above_threshold": 10,
+    "sections_below_threshold": 0
+  },
+  "_validation": {
+    "is_valid": true,
+    "issues": [
+      "WARNING: Duplicate headings detected across sections"
+    ],
+    "section_count": 10,
+    "avg_confidence": 0.689
+  }
+}

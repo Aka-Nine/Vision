@@ -1,0 +1,84 @@
+{
+    "schema_version": "1.0",
+    "generation_metadata": {
+        "generation_number": 1,
+        "started_at": "2026-03-17T22:28:02.588695",
+        "completed_at": "2026-03-17T22:30:51.836893",
+        "status": "completed",
+        "duration_seconds": 150.93,
+        "pipeline_id": "b246e3ac-82fa-46d8-abe9-a1795128a191"
+    },
+    "trends": [
+        {
+            "trend": "UI for: Give Django your time and money, not your tokens",
+            "popularity_score": 0.88,
+            "source": "hacker_news_free_api"
+        }
+    ],
+    "design_references": [
+        {
+            "design_references": [
+                "https://placehold.co/400x300?text=hero_display_poster+reference",
+                "https://placehold.co/400x300?text=sidebar_navigation+reference",
+                "https://placehold.co/400x300?text=header_bar+reference",
+                "https://placehold.co/400x300?text=data_overview_cards+reference",
+                "https://placehold.co/400x300?text=sales_and_metrics_visualization+reference",
+                "https://placehold.co/400x300?text=list_and_details_panels+reference",
+                "https://placehold.co/400x300?text=promotional_action_cards+reference"
+            ]
+        }
+    ],
+    "ui_patterns": [
+        {
+            "layout_type": "Dashboard Layout",
+            "structure": [
+                "hero_display_poster",
+                "sidebar_navigation",
+                "header_bar",
+                "data_overview_cards",
+                "sales_and_metrics_visualization",
+                "list_and_details_panels",
+                "promotional_action_cards"
+            ]
+        }
+    ],
+    "demand_scores": [
+        {
+            "template_type": "Dashboard Layout template",
+            "demand_score": 0.2,
+            "competition_score": 0.5
+        }
+    ],
+    "design_briefs": [
+        {
+            "product_type": "Dashboard Layout template Template",
+            "target_market": "AI startups",
+            "style": "modern dark gradient",
+            "sections": [
+                "hero_display_poster",
+                "sidebar_navigation",
+                "header_bar",
+                "data_overview_cards",
+                "sales_and_metrics_visualization",
+                "list_and_details_panels",
+                "promotional_action_cards"
+            ],
+            "animation_type": "scroll reveal",
+            "demand_score": 0.2,
+            "_llm_provider": "gemini_cloud (llama unavailable)",
+            "quality_score": 1.0,
+            "provenance": {
+                "trend_source": "hacker_news_free_api",
+                "design_reference": "Scraped from Pinterest: Give Django your time and money, not your tokens",
+                "image_urls": [
+                    "https://i.pinimg.com/736x/ff/16/04/ff1604a55999e460af00f575856d1b30.jpg",
+                    "https://i.pinimg.com/736x/65/99/91/6599918fd002c64a9057480bb191813c.jpg",
+                    "https://i.pinimg.com/736x/78/47/79/7847794ed68e2a1d5fcc97cb5eb874fa.jpg",
+                    "https://i.pinimg.com/736x/d0/5a/cf/d05acf41a0f077205481a70e35ab931e.jpg"
+                ],
+                "analysis_model": "gemini_2.5_pro",
+                "source_reputation": 0.6
+            }
+        }
+    ]
+}

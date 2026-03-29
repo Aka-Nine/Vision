@@ -1,0 +1,44 @@
+[
+  {
+    "template_id": "test-001",
+    "timestamp": 1774546718.4158633,
+    "ast_validation_score": 0.95,
+    "generation_success": true,
+    "dominant_pattern": "ai_saas_dark",
+    "variation_seed": 42,
+    "section_count": 6,
+    "content_fill_rate": 0.8,
+    "build_errors": 0,
+    "generation_time_seconds": 12.5,
+    "demand_score": 0.88,
+    "complexity_tier": "rich"
+  },
+  {
+    "template_id": "test-001",
+    "timestamp": 1774546950.1073132,
+    "ast_validation_score": 0.95,
+    "generation_success": true,
+    "dominant_pattern": "ai_saas_dark",
+    "variation_seed": 42,
+    "section_count": 6,
+    "content_fill_rate": 0.8,
+    "build_errors": 0,
+    "generation_time_seconds": 12.5,
+    "demand_score": 0.88,
+    "complexity_tier": "rich"
+  },
+  {
+    "template_id": "test-001",
+    "timestamp": 1774547235.0446105,
+    "ast_validation_score": 0.95,
+    "generation_success": true,
+    "dominant_pattern": "ai_saas_dark",
+    "variation_seed": 42,
+    "section_count": 6,
+    "content_fill_rate": 0.8,
+    "build_errors": 0,
+    "generation_time_seconds": 12.5,
+    "demand_score": 0.88,
+    "complexity_tier": "rich"
+  }
+]

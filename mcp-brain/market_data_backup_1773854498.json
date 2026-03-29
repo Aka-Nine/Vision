@@ -1,0 +1,75 @@
+{
+    "schema_version": "1.0",
+    "generation_metadata": {
+        "generation_number": 1,
+        "started_at": "2026-03-17T23:29:57.909314",
+        "completed_at": "2026-03-17T23:32:36.214807",
+        "status": "completed",
+        "duration_seconds": 144.5,
+        "pipeline_id": "cd77d009-f825-490f-9cff-00d38b5039a7"
+    },
+    "trends": [
+        {
+            "trend": "UI for: Microsoft's 'unhackable' Xbox One has been hacked by 'Bliss'",
+            "popularity_score": 0.88,
+            "source": "hacker_news_free_api"
+        }
+    ],
+    "design_references": [
+        {
+            "design_references": [
+                "https://placehold.co/400x300?text=Global Header+reference",
+                "https://placehold.co/400x300?text=Left Vertical Navigation Bar+reference",
+                "https://placehold.co/400x300?text=Pin Detail View (Main Content)+reference",
+                "https://placehold.co/400x300?text=Related Pins Grid (Masonry Layout)+reference"
+            ]
+        }
+    ],
+    "ui_patterns": [
+        {
+            "layout_type": "Header-Sidebar-Content Split Layout",
+            "structure": [
+                "Global Header",
+                "Left Vertical Navigation Bar",
+                "Pin Detail View (Main Content)",
+                "Related Pins Grid (Masonry Layout)"
+            ]
+        }
+    ],
+    "demand_scores": [
+        {
+            "template_type": "AI SaaS template",
+            "demand_score": 0.91,
+            "competition_score": 0.45
+        }
+    ],
+    "design_briefs": [
+        {
+            "product_type": "AI SaaS template Template",
+            "target_market": "AI startups",
+            "style": "modern dark gradient",
+            "sections": [
+                "Global Header",
+                "Left Vertical Navigation Bar",
+                "Pin Detail View (Main Content)",
+                "Related Pins Grid (Masonry Layout)"
+            ],
+            "animation_type": "scroll reveal",
+            "demand_score": 0.91,
+            "_llm_provider": "gemini_cloud (llama unavailable)",
+            "quality_score": 1.0,
+            "provenance": {
+                "trend_source": "hacker_news_free_api",
+                "design_reference": "Scraped from Pinterest: Microsoft's 'unhackable' Xbox One has been hacked by 'Bliss'",
+                "image_urls": [
+                    "https://i.pinimg.com/736x/64/5b/18/645b183b2f444b6bed4d119cdcc8d450.jpg",
+                    "https://i.pinimg.com/736x/40/ad/5c/40ad5c7469cfdaba6727aa0af57cc60d.jpg",
+                    "https://i.pinimg.com/736x/ad/2a/c6/ad2ac6a48e229c2c656533a3a151d25b.jpg",
+                    "https://i.pinimg.com/736x/cf/3f/cc/cf3fcc8369a9d0f158d7ae77b367653c.jpg"
+                ],
+                "analysis_model": "gemini_2.5_pro",
+                "source_reputation": 0.6
+            }
+        }
+    ]
+}

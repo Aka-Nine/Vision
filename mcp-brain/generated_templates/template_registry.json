@@ -1,0 +1,142 @@
+[
+  {
+    "template_name": "dashboard-layout-template-template",
+    "version": "1.0",
+    "framework": "react",
+    "framework_version": "18.x",
+    "bundler": "vite",
+    "css_framework": "tailwindcss",
+    "generated_at": "2026-03-17T22:31:10",
+    "source_brief": "brief_a10f20627c39",
+    "brief_hash": "a10f20627c39",
+    "components": 7,
+    "template_type": "Dashboard Layout template Template",
+    "target_market": "AI startups",
+    "demand_score": 0.2,
+    "sections": [
+      "hero_display_poster",
+      "sidebar_navigation",
+      "header_bar",
+      "data_overview_cards",
+      "sales_and_metrics_visualization",
+      "list_and_details_panels",
+      "promotional_action_cards"
+    ],
+    "style_theme": "dark",
+    "validation": {
+      "valid": true,
+      "warnings": 0
+    },
+    "archive": "dashboard-layout-template-template.zip",
+    "archive_size_bytes": 11915
+  },
+  {
+    "template_name": "sample-index-html",
+    "version": "1.0",
+    "framework": "static_html",
+    "generated_at": "2026-03-17T00:00:00",
+    "source_brief": "sample",
+    "components": 0,
+    "template_type": "Sample Template",
+    "target_market": "N/A",
+    "demand_score": null,
+    "sections": [],
+    "style_theme": "dark",
+    "validation": {
+      "valid": true,
+      "warnings": 0
+    }
+  },
+  {
+    "template_name": "webpage-template-template",
+    "version": "3.0",
+    "framework": "react",
+    "framework_version": "18.x",
+    "bundler": "vite",
+    "css_framework": "tailwindcss",
+    "generated_at": "2026-03-19T00:03:15",
+    "source_brief": "brief_321dde532d7d",
+    "brief_hash": "321dde532d7d",
+    "components": 9,
+    "template_type": "webpage template Template",
+    "target_market": "AI startups",
+    "demand_score": 0.21,
+    "sections": [
+      "hero",
+      "product_video",
+      "agent_first_feature_section",
+      "feature_explorer",
+      "use_cases_carousel",
+      "solutions_offerings_pricing",
+      "latest_blogs_carousel",
+      "download_call_to_action",
+      "global_footer"
+    ],
+    "style_theme": "dark",
+    "validation": {
+      "valid": true,
+      "warnings": 0
+    },
+    "archive": "webpage-template-template.zip",
+    "archive_size_bytes": 13586
+  },
+  {
+    "template_name": "ai-saas-template-template",
+    "version": "27.0",
+    "framework": "react",
+    "framework_version": "18.x",
+    "bundler": "vite",
+    "css_framework": "tailwindcss",
+    "generated_at": "2026-03-25T18:34:48",
+    "source_brief": "brief_d7936ae8b2f8",
+    "brief_hash": "d7936ae8b2f8",
+    "components": 30,
+    "template_type": "AI SaaS template Template",
+    "target_market": "AI startups",
+    "demand_score": 0.91,
+    "sections": [
+      "global_header",
+      "left_sidebar_navigation",
+      "pin_detail_card_container",
+      "related_pins_grid"
+    ],
+    "style_theme": "dark",
+    "validation": {
+      "valid": true,
+      "warnings": 0
+    },
+    "archive": "ai-saas-template-template.zip",
+    "archive_size_bytes": 53573
+  },
+  {
+    "template_name": "landing-page",
+    "version": "7.0",
+    "framework": "react",
+    "framework_version": "18.x",
+    "bundler": "vite",
+    "css_framework": "tailwindcss",
+    "generated_at": "2026-03-27T00:15:38",
+    "source_brief": "brief_da02c8c19307",
+    "brief_hash": "da02c8c19307",
+    "components": 23,
+    "template_type": "Landing Page",
+    "target_market": "general",
+    "demand_score": 0.0,
+    "sections": [
+      "granger_header_hero",
+      "granger_bento_features",
+      "granger_events",
+      "granger_tracking",
+      "granger_dark_banner",
+      "granger_testimonials",
+      "granger_footer"
+    ],
+    "style_theme": "light",
+    "validation": {
+      "valid": true,
+      "warnings": 0
+    },
+    "archive": "landing-page.zip",
+    "archive_size_bytes": 50403
+  }
+]
